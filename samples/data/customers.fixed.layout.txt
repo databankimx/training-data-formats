@@ -1,0 +1,14 @@
+Fixed-width layout for customers.fixed
+
+Positions are 1-based and inclusive. Each row is one customer, with no header row.
+
+column        start  width  alignment  notes
+customer_id       1      6  right    
+name              8     20  left     
+signup_date      29     10  left     
+balance          40      8  right    
+active           49      5  left     
+country_code     55      2  left     
+
+Text columns are padded on the right with spaces. Numbers are padded on the left.
+A row is valid only if every column falls inside its positions.

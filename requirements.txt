@@ -1,0 +1,33 @@
+# Python packages for the data formats tutorial, and for the sample generator.
+# Create and activate a virtual environment in the repository root, then install:
+#   python -m venv .venv
+#   .venv\Scripts\activate
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+#
+# Everything else the Python samples use is in the standard library (json, csv, xml, decimal, and others).
+# The versions are pinned to the set the sample generator was run with. Pinning keeps every later run of the
+# generator, and every sample, on the same packages.
+
+# Test and tool support, pulled in by pytest.
+colorama==0.4.6
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+
+# YAML: the Python samples read and write YAML with this package.
+PyYAML==6.0.3
+
+# Excel: reads and writes .xlsx workbooks. et_xmlfile is its XML writer.
+openpyxl==3.1.5
+et_xmlfile==2.0.0
+
+# Parquet: reads and writes .parquet files. This package is large, so the first install takes a while.
+pyarrow==26.0.1
+
+# Safe XML parsing: refuses external entities and entity expansion, as the security chapter shows.
+defusedxml==0.7.1
+
+# Tests: checks for the sample generator and the lesson samples.
+pytest==9.2.0

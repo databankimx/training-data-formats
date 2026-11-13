@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE order [
+  <!ENTITY secret SYSTEM "file:///example/secret-notes.txt">
+]>
+<orders>
+  <order id="5001">
+    <customer_id>1001</customer_id>
+    <order_date>2025-01-08</order_date>
+    <amount>129.99</amount>
+    <status>shipped</status>
+    <note>&secret;</note>
+  </order>
+</orders>

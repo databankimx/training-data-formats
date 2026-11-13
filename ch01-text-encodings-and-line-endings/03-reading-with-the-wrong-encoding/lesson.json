@@ -1,0 +1,7 @@
+{
+  "title": "Reading with the Wrong Encoding",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "See what a UTF-8 reader does to a Windows-1252 file: it doesn't fail, it substitutes replacement characters.",
+  "prerequisites": ["The Byte-Order Mark"]
+}

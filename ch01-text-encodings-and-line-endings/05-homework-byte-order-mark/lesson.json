@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Find the Byte-Order Mark",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Read a file's first bytes, report whether it starts with a byte-order mark, and print the first column name with the mark removed.",
+  "prerequisites": ["The Byte-Order Mark"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Starts with a byte-order mark: yes\nFirst header: customer_id"
+}

@@ -1,0 +1,13 @@
+customer_id,name,email,signup_date,balance,active,country_code,address_street,address_city,address_postal_code,tags
+1001,Alice Carter,alice.carter@example.invalid,2021-03-14,1250.75,true,US,12 Maple Street,Springfield,62704,vip;newsletter
+1002,"Okafor, Chidi",chidi.okafor@example.invalid,2020-11-02,0.00,false,GB,14 Harbour Road,Bristol,BS1 4DJ,
+1003,Renée Dubois,renee.dubois@example.invalid,2022-06-30,980.10,true,FR,7 Rue des Lilas,Lyon,69001,newsletter
+1004,Lars Haugen,lars.haugen@example.invalid,2019-09-09,4410.00,true,NO,Storgata 5,Oslo,0155,vip
+1005,Mei Lin,mei.lin@example.invalid,2023-01-18,75.50,true,SG,21 Orchard Road,Singapore,238863,new
+1006,Samuel Osei,samuel.osei@example.invalid,2021-07-22,0.00,false,DE,Hauptstraße 3,Berlin,10115,dormant
+1007,Ana Ribeiro,ana.ribeiro@example.invalid,2024-02-05,230.00,true,ES,9 Calle Mayor,Madrid,28013,
+1008,James O'Connor,james.oconnor@example.invalid,2018-04-27,3125.25,true,IE,2 Quay Street,Galway,H91 F2K3,vip;newsletter
+1009,Yuki Tanaka,yuki.tanaka@example.invalid,2022-10-11,512.00,true,JP,1-2-3 Shibuya,Tokyo,150-0002,new
+1010,Priya Nair,priya.nair@example.invalid,2020-05-16,88.20,false,AU,45 George Street,Sydney,2000,dormant
+1011,Tomasz Wójcik,tomasz.wojcik@example.invalid,2021-12-01,640.00,true,PL,ul. Piotrkowska 10,Łódź,90-001,newsletter
+1012,Grace Mwangi,grace.mwangi@example.invalid,2025-08-19,0.00,true,KE,80 Kenyatta Avenue,Nairobi,00100,new

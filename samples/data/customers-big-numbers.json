@@ -1,0 +1,12 @@
+[
+  {
+    "customer_id": 9007199254740993,
+    "name": "Test Account One",
+    "balance": 1250.75
+  },
+  {
+    "customer_id": 12345678901234567890,
+    "name": "Test Account Two",
+    "balance": 0.5
+  }
+]

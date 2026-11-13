@@ -1,0 +1,7 @@
+customer_id,name,email,signup_date,balance,active,country_code,address_street,address_city,address_postal_code,tags
+1001,Alice Carter,alice.carter@example.invalid,14/03/2021,1250.75,true,US,12 Maple Street,Springfield,62704,vip;newsletter
+1002,"Okafor, Chidi",chidi.okafor@example.invalid,"March 14, 2021",0.00,false,GB,14 Harbour Road,Bristol,BS1 4DJ,
+1003,Renée Dubois,renee.dubois@example.invalid,2021-02-30,980.10,true,FR,7 Rue des Lilas,Lyon,69001,newsletter
+1004,Lars Haugen,lars.haugen@example.invalid,2019-09-09,4410.00,true,NO,Storgata 5,Oslo,0155,vip
+1005,Mei Lin,mei.lin@example.invalid,2023-01-18,75.50,true,SG,21 Orchard Road,Singapore,238863,new
+1006,Samuel Osei,samuel.osei@example.invalid,2021-07-22,0.00,false,DE,Hauptstraße 3,Berlin,10115,dormant

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Read the File with the Right Encoding",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Decode a Windows-1252 file with the encoding it was written in, and count the lines that contain a specific accented letter.",
+  "prerequisites": ["Reading with the Wrong Encoding"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Lines containing e-acute: 1"
+}

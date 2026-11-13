@@ -1,0 +1,52 @@
+[
+  {
+    "customer_id": 1001,
+    "name": "Alice Carter",
+    "email": "alice.carter@example.invalid",
+    "signup_date": "2021-03-14",
+    "balance": 1250.75,
+    "active": true,
+    "country_code": "US",
+    "address": {
+      "street": "12 Maple Street",
+      "city": "Springfield",
+      "postal_code": "62704"
+    },
+    "tags": [
+      "vip",
+      "newsletter"
+    ]
+  },
+  {
+    "customer_id": 1002,
+    "name": "Okafor, Chidi",
+    "email": "chidi.okafor@example.invalid",
+    "signup_date": "2020-11-02",
+    "balance": 0.0,
+    "active": false,
+    "country_code": "GB",
+    "address": {
+      "street": "14 Harbour Road",
+      "city": "Bristol",
+      "postal_code": "BS1 4DJ"
+    },
+    "tags": []
+  },
+  {
+    "customer_id": 1003,
+    "name": "Renée Dubois",
+    "email": "renee.dubois@example.invalid",
+    "signup_date": "2022-06-30",
+    "balance": 980.1,
+    "active": true,
+    "country_code": "FR",
+    "address": {
+      "street": "7 Rue des Lilas",
+      "city": "Lyon",
+      "postal_code": "69001"
+    },
+    "tags": [
+      "newsletter"
+    ]
+  }
+]

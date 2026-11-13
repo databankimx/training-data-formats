@@ -1,0 +1,7 @@
+{
+  "title": "Line Endings",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Tell an LF line ending from a CRLF one in the raw bytes, and know why a file can contain both.",
+  "prerequisites": ["Reading with the Wrong Encoding"]
+}
