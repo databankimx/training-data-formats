@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Duplicate IDs",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Find the customer identifiers that appear more than once in a CSV file, and report them in the order they first repeat.",
+  "prerequisites": ["Homework: Active and Tagged"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Rows: 14\nUnique customer ids: 12\nRepeated ids: 1003, 1007"
+}

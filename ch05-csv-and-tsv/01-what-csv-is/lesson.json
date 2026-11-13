@@ -1,0 +1,7 @@
+{
+  "title": "What CSV Is",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "State the rules a CSV file follows, including quoting, and explain why CSV carries no types.",
+  "prerequisites": ["Summary: JSON Lines"]
+}

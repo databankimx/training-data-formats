@@ -1,0 +1,7 @@
+{
+  "title": "What JSON Lines Is",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Explain the difference between one JSON array and JSON Lines, and why each line stands alone.",
+  "prerequisites": ["Summary: JSON"]
+}

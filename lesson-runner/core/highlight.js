@@ -1,8 +1,8 @@
 // core/highlight.js
 //
-// Colors code for the lesson text and the editor. Only the course's three languages are colored; anything else is
-// shown as plain text. The output is HTML with highlight.js class names, which the page styles. The text is escaped,
-// so code can't inject markup.
+// Colors code for the lesson text and the editor. The course's languages are colored, and so are the data formats the
+// lessons show, such as JSON. Anything else is shown as plain text. The output is HTML with highlight.js class names,
+// which the page styles. The text is escaped, so code can't inject markup.
 
 'use strict';
 
@@ -12,6 +12,8 @@ hljs.registerLanguage('csharp', require('highlight.js/lib/languages/csharp'));
 hljs.registerLanguage('python', require('highlight.js/lib/languages/python'));
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 hljs.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'));
+hljs.registerLanguage('json', require('highlight.js/lib/languages/json'));
+hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 
 const ALIASES = {
   csharp: 'csharp',
@@ -22,6 +24,9 @@ const ALIASES = {
   js: 'javascript',
   markdown: 'markdown',
   md: 'markdown',
+  json: 'json',
+  jsonl: 'json',
+  xml: 'xml',
 };
 
 function escapeHtml(text) {

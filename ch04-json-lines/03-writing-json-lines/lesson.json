@@ -1,0 +1,7 @@
+{
+  "title": "Writing JSON Lines",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Write JSON Lines one record at a time, in compact form, and see why each record must fit on one line.",
+  "prerequisites": ["Reading JSON Lines"]
+}

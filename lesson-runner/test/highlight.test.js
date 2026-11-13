@@ -23,6 +23,12 @@ test('Python and JavaScript keywords are marked for coloring', () => {
   assert.match(highlightCode('const x = 1;', 'javascript'), /hljs-keyword">const</);
 });
 
+test('JSON and JSON Lines are colored, with their property names marked', () => {
+  const json = highlightCode('{"customer_id": 1001}', 'json');
+  assert.match(json, /hljs-attr/);
+  assert.match(highlightCode('{"customer_id": 1001}', 'jsonl'), /hljs-attr/);
+});
+
 test('a language the course does not use is shown as escaped plain text', () => {
   const html = highlightCode('<b>hi</b>', 'cobol');
   assert.equal(html, '&lt;b&gt;hi&lt;/b&gt;');

@@ -1,0 +1,7 @@
+{
+  "title": "TSV",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read a tab-separated file with the same reader, and see why the same name needs no quotes in TSV.",
+  "prerequisites": ["Formula Cells"]
+}

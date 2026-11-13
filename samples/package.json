@@ -1,5 +1,9 @@
 {
   "name": "training-data-formats-samples",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "csv-parse": "7.0.2",
+    "csv-stringify": "6.8.3"
+  }
 }

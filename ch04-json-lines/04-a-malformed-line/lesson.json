@@ -1,0 +1,7 @@
+{
+  "title": "A Malformed Line",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Parse a JSON Lines file in which one line is damaged, report that line by number, and keep reading the rest.",
+  "prerequisites": ["Writing JSON Lines"]
+}
