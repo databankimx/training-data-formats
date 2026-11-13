@@ -1,0 +1,7 @@
+{
+  "title": "What JSON Is",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Name the six kinds of JSON value, and explain why a JSON number doesn't say whether it's an integer, a decimal, or too large for a program's number type.",
+  "prerequisites": ["Summary: Detecting a Format"]
+}

@@ -5,6 +5,10 @@ output is committed, so learners never need to run it. Running it again must pro
 workbook and Parquet timestamps are fixed, and every text file is written with LF line endings unless a
 file is deliberately defective.
 
+Customers.xls is the exception. It is committed as a fixed file and is not rebuilt by default, because the
+xlwt writer stamps its document properties with timestamps that change on every run. Rebuild it only on
+purpose, with --rebuild-xls, and then commit the result deliberately. verify() checks its contents instead.
+
 Two kinds of file are produced:
 
 * good files, which all describe the same customers and orders, so a conversion can be checked against
@@ -12,8 +16,9 @@ Two kinds of file are produced:
 * bad files, each of which teaches one failure. The name of each bad file says what is wrong with it.
 
 Usage:
-    python generate.py            build every file
-    python generate.py --verify   build every file, then read the good files back and check them
+    python generate.py                build every file except customers.xls
+    python generate.py --rebuild-xls  also rebuild customers.xls (see the warning above)
+    python generate.py --verify       build every file except customers.xls, then check the good files
 """
 
 from __future__ import annotations
@@ -30,6 +35,7 @@ from xml.etree import ElementTree as ET
 import openpyxl
 import pyarrow as pa
 import pyarrow.parquet as pq
+import xlwt  # Legacy Excel writer (BSD license). Used only for the .xls sample, written in the old binary format.
 import yaml
 
 from dataset import CUSTOMERS, ORDERS
@@ -277,6 +283,31 @@ def build_excel() -> None:
     write_bytes("customers-formula.xlsx", workbook_bytes({"customers": (customers_headers, formula_rows)}))
 
 
+# A legacy .xls workbook, in the binary format Excel used before 2007. It has the same two sheets as customers.xlsx.
+# WARNING: customers.xls is committed. xlwt stamps its document properties with a timestamp on every run, so
+# rebuilding changes the file's bytes. Run this only with --rebuild-xls, and commit the result on purpose.
+# Its first bytes are the OLE2 signature, which the detector reports as ole2.
+def build_xls() -> None:
+    date_style = xlwt.easyxf(num_format_str="yyyy-mm-dd")
+    book = xlwt.Workbook(encoding="utf-8")
+    for name, (headers, rows) in (
+        ("customers", excel_rows()),
+        ("orders", orders_excel_rows()),
+    ):
+        sheet = book.add_sheet(name)
+        for column, header in enumerate(headers):
+            sheet.write(0, column, header)
+        for row_number, row in enumerate(rows, start=1):
+            for column, value in enumerate(row):
+                if isinstance(value, dt.date):
+                    sheet.write(row_number, column, value, date_style)
+                else:
+                    sheet.write(row_number, column, value)
+    buffer = io.BytesIO()
+    book.save(buffer)
+    write_bytes("customers.xls", buffer.getvalue())
+
+
 PARQUET_SCHEMA = pa.schema([
     ("customer_id", pa.int64()),
     ("name", pa.string()),
@@ -480,6 +511,17 @@ def verify() -> None:
     sheet = book["customers"]
     assert sheet.cell(row=2, column=1).value == expected_ids[0], "customers.xlsx first id"
 
+    import xlrd  # Legacy Excel reader (BSD license). Opens customers.xls and checks its contents.
+
+    xls = xlrd.open_workbook(OUT / "customers.xls")
+    customers_sheet = xls.sheet_by_name("customers")
+    assert customers_sheet.nrows == len(CUSTOMERS) + 1, "customers.xls has one row per customer"
+    assert int(customers_sheet.cell_value(1, 0)) == expected_ids[0], "customers.xls first id"
+    assert customers_sheet.cell_value(1, 1) == CUSTOMERS[0]["name"], "customers.xls first name"
+    orders_sheet = xls.sheet_by_name("orders")
+    assert orders_sheet.nrows == len(ORDERS) + 1, "customers.xls has one row per order"
+    assert int(orders_sheet.cell_value(1, 0)) == ORDERS[0]["order_id"], "customers.xls first order id"
+
     table = pq.read_table(OUT / "customers.parquet")
     assert table.column("customer_id").to_pylist() == expected_ids, "customers.parquet ids"
     assert str(table.column("balance")[0]) == "1250.75", "customers.parquet decimal"
@@ -494,6 +536,8 @@ def main() -> None:
     build_yaml()
     build_fixed()
     build_excel()
+    if "--rebuild-xls" in sys.argv:
+        build_xls()
     build_parquet()
     build_bad_text()
     print(f"wrote sample files to {OUT}")

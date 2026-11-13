@@ -1,0 +1,7 @@
+{
+  "title": "Nested Objects",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read a nested object, flatten it into dotted keys, and write the nested part back out as JSON.",
+  "prerequisites": ["Writing JSON"]
+}

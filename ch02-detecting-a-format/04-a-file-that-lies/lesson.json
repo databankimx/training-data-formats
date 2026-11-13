@@ -1,0 +1,7 @@
+{
+  "title": "A File That Lies",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Compare what a file's name says with what its content says, and see why the content is the one to trust.",
+  "prerequisites": ["Detecting the Sample Files"]
+}

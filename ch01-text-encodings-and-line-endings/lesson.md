@@ -34,4 +34,6 @@ Two practical points follow from the table. First, a file that contains only ASC
 
 The chapter has four reading steps, each with a sample, three homework items, and a summary with three quizzes. The samples for the first two use inline data, which the comment above each one marks. The samples for the third and fourth read sample files. The homework reads sample files, and each item fixes one of the bad files in this chapter.
 
+**Libraries.** No third-party packages. C# uses `System.Text` (for `Encoding`), `System.IO`, and `System.Linq`, all part of the .NET base libraries. Python uses `os`, and everything else the samples need is part of the language. JavaScript uses `node:fs`, `node:path`, `TextEncoder`, `TextDecoder`, and `Buffer`, all built into Node.
+
 ---

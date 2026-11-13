@@ -727,7 +727,7 @@
 
     const label = document.createElement('span');
     label.className = 'data-control-label';
-    label.textContent = 'Open File';
+    label.textContent = 'File';
     wrap.append(label);
 
     let selected = files[0];
@@ -757,13 +757,13 @@
     editorChoice.className = 'data-control-editor';
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    editorChoice.append(checkbox, document.createTextNode(' Open in text editor'));
+    editorChoice.append(checkbox, document.createTextNode(' open as text'));
     wrap.append(editorChoice);
 
-    // The checkbox is offered only for a file that can be read as plain text.
+    // The checkbox is offered only for a file that can be read as plain text. It is ticked for a text file, by default.
     function syncEditorChoice() {
       editorChoice.hidden = !selected.text;
-      if (!selected.text) checkbox.checked = false;
+      checkbox.checked = selected.text;
     }
     syncEditorChoice();
 
@@ -1142,6 +1142,8 @@
     });
     document.getElementById('popout').addEventListener('click', () => {
       if (state.current) window.runner.popOutLesson(state.current.id);
+      // The main pane moves to Source, so the code stays in view while the lesson is in its own window.
+      showTab('source');
     });
     document.getElementById('popout-copy').addEventListener('click', (event) => {
       copyText(state.current ? state.current.markdown : '', event.currentTarget);

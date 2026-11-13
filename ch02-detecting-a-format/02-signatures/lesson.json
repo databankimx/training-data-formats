@@ -1,0 +1,7 @@
+{
+  "title": "Signatures as Bytes",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read the signatures of Parquet, zip, XML, and JSON as bytes, and see that a signature is only bytes, not a meaning.",
+  "prerequisites": ["The Name Is Not the Format"]
+}

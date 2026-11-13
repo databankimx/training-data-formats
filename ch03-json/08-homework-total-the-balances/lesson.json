@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Total the Balances",
+  "runtime": "multi",
+  "minutes": 30,
+  "objective": "Read the customers, count the active ones, and add their balances without floating-point error.",
+  "prerequisites": ["A Defective File"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers: 9\nTotal balance: 11311.80"
+}

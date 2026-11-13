@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Detect Three Files",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Write a detector that checks the signatures in order and reports the kind of three sample files.",
+  "prerequisites": ["A File That Lies"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "customers.parquet: parquet\ncustomers.xlsx: zip\ncustomers-as-json.csv: json"
+}

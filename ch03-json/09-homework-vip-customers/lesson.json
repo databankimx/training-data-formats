@@ -1,0 +1,11 @@
+{
+  "title": "Homework: VIP Customers and Their Cities",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read the nested address of each customer tagged vip, and print the identifier and city of each one, in file order.",
+  "prerequisites": ["Homework: Total the Balances"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "1001 Springfield\n1004 Oslo\n1008 Galway"
+}

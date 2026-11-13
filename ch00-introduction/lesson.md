@@ -8,4 +8,6 @@ The examples run on real files. A set of sample files, generated from one datase
 
 This chapter has two reading steps, a sample step, and a summary with three quizzes. It has no homework, because there is nothing to submit yet. The next chapter starts with text, encodings, and line endings, since every format depends on them.
 
+**Libraries.** No third-party packages. C# uses `System.IO` and `System.Text`, both part of the .NET base libraries. Python uses `os`, from the standard library. JavaScript uses `node:fs` and `node:path`, built into Node.
+
 ---
