@@ -11,7 +11,7 @@ const { execFile, spawn } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const { loadCatalog, flatten, summarize, neighbors } = require('./core/catalog');
+const { loadCatalog, flatten, summarize, neighbors, readParts, checkParts, groupByPart } = require('./core/catalog');
 const { createRenderer } = require('./core/markdown');
 const { lessonImageUri } = require('./core/images');
 const { sourceFromExamples } = require('./core/sources');
@@ -380,6 +380,13 @@ async function textEditorCommand(file) {
 
 function registerHandlers() {
   ipcMain.handle('catalog:list', () => summarize(loadCatalog(courseRoot)));
+  // The menu's parts, each with its chapters. Checked against the chapter folders, so a chapter missing from parts.json
+  // is reported rather than hidden.
+  ipcMain.handle('catalog:parts', () => {
+    const chapters = loadCatalog(courseRoot);
+    const parts = checkParts(readParts(courseRoot), chapters.map((chapter) => chapter.id));
+    return groupByPart(summarize(chapters), parts);
+  });
   ipcMain.handle('lesson:open', (_event, id) => openLesson(String(id)));
   ipcMain.handle('state:get', () => loadState(stateFile()));
   ipcMain.handle('state:visit', (_event, id) => {

@@ -9,6 +9,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('runner', {
   listCatalog: () => ipcRenderer.invoke('catalog:list'),
+  listParts: () => ipcRenderer.invoke('catalog:parts'),
   openLesson: (id) => ipcRenderer.invoke('lesson:open', id),
   getState: () => ipcRenderer.invoke('state:get'),
   visit: (id) => ipcRenderer.invoke('state:visit', id),

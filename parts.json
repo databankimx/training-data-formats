@@ -1,0 +1,32 @@
+{
+  "parts": [
+    {
+      "title": "Part I - Foundations",
+      "chapters": [
+        "ch00-introduction",
+        "ch01-text-encodings-and-line-endings",
+        "ch02-detecting-a-format"
+      ]
+    },
+    {
+      "title": "Part II - Core formats",
+      "chapters": [
+        "ch03-json",
+        "ch04-json-lines",
+        "ch05-csv-and-tsv",
+        "ch06-fixed-width-text",
+        "ch07-xml",
+        "ch08-yaml",
+        "ch09-excel",
+        "ch10-parquet"
+      ]
+    },
+    {
+      "title": "Part III - Working with data",
+      "chapters": [
+        "ch11-schemas-and-validation",
+        "ch12-cleaning"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Filling Nulls",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Replace a null that the data defines, send the nulls and empty values that it does not define to review, and count changed and review records separately.",
+  "prerequisites": ["Fixing Dates"]
+}

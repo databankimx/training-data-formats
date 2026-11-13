@@ -1,0 +1,7 @@
+{
+  "title": "Validating JSON Nulls",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Apply the schema's rules to JSON records, and report nulls, missing keys, and empty text separately.",
+  "prerequisites": ["Dates That Fail"]
+}

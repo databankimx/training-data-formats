@@ -53,6 +53,9 @@
 
   const state = {
     catalog: [],
+    // The menu's parts, each with its chapters, and the one part that is open. Only one part is open at a time.
+    parts: [],
+    openPart: null,
     current: null,
     chapterId: null,
     previous: null,
@@ -626,16 +629,45 @@
 
   // ---- Navigation: the lesson list, and showing a lesson ----
 
-  function renderNavigation() {
+  // Draws the parts. A part is a heading that opens or closes its chapters, and only one part is open at a time. A
+  // course without parts has one untitled group, which is drawn as a plain list.
+  function drawChapters() {
     ui.chapters.replaceChildren();
-    for (const chapter of state.catalog) {
-      const row = document.createElement('button');
-      row.type = 'button';
-      row.className = 'nav-row' + (chapter.id === state.chapterId ? ' selected' : '');
-      row.textContent = chapter.label;
-      row.addEventListener('click', () => openLesson(chapter.id));
-      ui.chapters.append(row);
+    for (const part of state.parts) {
+      if (part.title === null) {
+        for (const chapter of part.chapters) ui.chapters.append(chapterRow(chapter, false));
+        continue;
+      }
+      const open = state.openPart === part.title;
+      const heading = document.createElement('button');
+      heading.type = 'button';
+      heading.className = 'nav-row part' + (open ? ' open' : '');
+      heading.textContent = (open ? '\u25BE ' : '\u25B8 ') + part.title;
+      heading.addEventListener('click', () => {
+        state.openPart = open ? null : part.title;
+        drawChapters();
+      });
+      ui.chapters.append(heading);
+      if (open) {
+        for (const chapter of part.chapters) ui.chapters.append(chapterRow(chapter, true));
+      }
     }
+  }
+
+  function chapterRow(chapter, inPart) {
+    const row = document.createElement('button');
+    row.type = 'button';
+    row.className = 'nav-row' + (inPart ? ' in-part' : '') + (chapter.id === state.chapterId ? ' selected' : '');
+    row.textContent = chapter.label;
+    row.addEventListener('click', () => openLesson(chapter.id));
+    return row;
+  }
+
+  // Draws the parts and the steps of the current chapter. The part that holds the current chapter is opened.
+  function renderNavigation() {
+    const owner = state.parts.find((part) => part.chapters.some((chapter) => chapter.id === state.chapterId));
+    if (owner && owner.title !== null) state.openPart = owner.title;
+    drawChapters();
 
     ui.lessons.replaceChildren();
     const chapter = state.catalog.find((candidate) => candidate.id === state.chapterId);
@@ -1207,6 +1239,7 @@
 
     try {
       state.catalog = await window.runner.listCatalog();
+      state.parts = await window.runner.listParts();
       if (state.catalog.length === 0) {
         ui.title.textContent = 'No chapters were found.';
         return;
@@ -1228,8 +1261,9 @@
 
   // The pop-out has no chapter list, so its Next button needs the catalog too.
   if (isPopout && window.runner) {
-    window.runner.listCatalog().then((catalog) => {
+    Promise.all([window.runner.listCatalog(), window.runner.listParts()]).then(([catalog, parts]) => {
       state.catalog = catalog;
+      state.parts = parts;
     });
   }
 

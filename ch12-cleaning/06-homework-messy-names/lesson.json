@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Messy Names and Codes",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Apply the trimming rule to names and the uppercase rule to country codes, count the values changed, and count the values that need review.",
+  "prerequisites": ["Removing Duplicates"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Changed values: 3\nValues needing review: 1"
+}

@@ -120,4 +120,43 @@ function neighbors(items, id) {
   };
 }
 
-module.exports = { loadCatalog, flatten, summarize, neighbors };
+// Reads parts.json from the course root. Returns null when the file is missing, so a course without parts shows a flat list.
+function readParts(courseRoot) {
+  const file = path.join(courseRoot, 'parts.json');
+  if (!fs.existsSync(file)) return null;
+  const parsed = readJson(file);
+  if (!parsed || !Array.isArray(parsed.parts)) throw new Error('parts.json must have a "parts" list');
+  return parsed.parts;
+}
+
+// Checks that the parts name each chapter folder exactly once, and that no name is unknown. Every chapter must be in
+// a part, so a new chapter is never left out of the menu by accident. Returns the parts, or null when there are none.
+function checkParts(parts, chapterIds) {
+  if (parts === null) return null;
+  const listed = new Set();
+  for (const part of parts) {
+    if (typeof part.title !== 'string' || !Array.isArray(part.chapters)) {
+      throw new Error('Each part in parts.json needs a "title" and a "chapters" list');
+    }
+    for (const id of part.chapters) {
+      if (!chapterIds.includes(id)) throw new Error(`parts.json names ${id}, which is not a chapter folder`);
+      if (listed.has(id)) throw new Error(`parts.json lists ${id} more than once`);
+      listed.add(id);
+    }
+  }
+  const unlisted = chapterIds.filter((id) => !listed.has(id));
+  if (unlisted.length > 0) throw new Error(`parts.json does not list ${unlisted.join(', ')}`);
+  return parts;
+}
+
+// Groups the chapter summaries under their parts, in the order parts.json gives. With no parts, one untitled group holds
+// every chapter, and the menu draws them without headings.
+function groupByPart(summaries, parts) {
+  if (parts === null) return [{ title: null, chapters: summaries }];
+  return parts.map((part) => ({
+    title: part.title,
+    chapters: part.chapters.map((id) => summaries.find((chapter) => chapter.id === id)),
+  }));
+}
+
+module.exports = { loadCatalog, flatten, summarize, neighbors, readParts, checkParts, groupByPart };
