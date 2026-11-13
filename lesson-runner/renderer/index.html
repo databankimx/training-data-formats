@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
     <title>Working With Data Formats</title>
     <style>
       :root {
@@ -138,6 +138,9 @@
       .data-control-name { font-family: Consolas, "Cascadia Mono", monospace; font-size: 13px; }
       .data-control-editor { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: 13px; cursor: pointer; }
       .source-files { padding: 4px 8px; }
+      .missing-image { color: var(--error); font-style: italic; }
+      .examples-note { color: var(--muted); font-style: italic; margin: 0 0 8px; }
+      .lesson img { max-width: 100%; height: auto; display: block; margin: 12px 0; }
       .data-file-button { padding: 4px 10px; background: var(--button-off); color: var(--text); border: none; border-radius: 3px; font: inherit; font-size: 13px; cursor: pointer; }
       .data-file-button:hover { background: var(--select); }
 

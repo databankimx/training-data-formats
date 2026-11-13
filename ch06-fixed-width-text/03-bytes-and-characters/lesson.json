@@ -1,0 +1,7 @@
+{
+  "title": "Bytes and Characters",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "See how a multibyte character moves every later field when a layout is measured in bytes, and why the layout's unit has to be known.",
+  "prerequisites": ["Reading Fixed-Width Text"]
+}

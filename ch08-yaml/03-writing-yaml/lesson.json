@@ -1,0 +1,7 @@
+{
+  "title": "Writing YAML",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Write a record as YAML, read it back, and confirm the data survived, even though each library lays out the text differently.",
+  "prerequisites": ["Reading YAML"]
+}

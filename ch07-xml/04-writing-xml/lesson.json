@@ -1,0 +1,7 @@
+{
+  "title": "Writing XML",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Build an XML element with an attribute and text that contains markup characters, and let the library escape the text.",
+  "prerequisites": ["Attributes and Namespaces"]
+}

@@ -153,14 +153,18 @@
     localStorage.setItem('language', language);
   }
 
-  // Shows the chosen language's example in every examples block on the page.
+  // Shows the chosen language's example in every examples block on the page. A block that lacks that language shows its
+  // first available one, so a Python-only example still shows something when C# is chosen.
   function applyLanguage(language) {
     for (const block of ui.lesson.querySelectorAll('[data-examples]')) {
+      const panes = Array.from(block.querySelectorAll('.example-pane'));
+      const available = panes.map((pane) => pane.dataset.language);
+      const shown = available.includes(language) ? language : available[0];
       for (const tab of block.querySelectorAll('.language-tab')) {
-        tab.classList.toggle('active', tab.dataset.language === language);
+        tab.classList.toggle('active', tab.dataset.language === shown);
       }
-      for (const pane of block.querySelectorAll('.example-pane')) {
-        pane.hidden = pane.dataset.language !== language;
+      for (const pane of panes) {
+        pane.hidden = pane.dataset.language !== shown;
       }
     }
   }

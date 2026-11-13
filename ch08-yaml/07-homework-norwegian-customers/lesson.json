@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Norwegian Customers",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Read a YAML file in which a value looks like a boolean, and count the customers whose country code is NO, keeping the code as text.",
+  "prerequisites": ["Homework: VIP Count and Balance Total"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Norwegian customers: 1"
+}

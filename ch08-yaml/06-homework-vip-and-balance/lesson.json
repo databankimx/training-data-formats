@@ -1,0 +1,11 @@
+{
+  "title": "Homework: VIP Count and Balance Total",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read a YAML list, count the customers tagged vip, and total the quoted balances exactly.",
+  "prerequisites": ["Tabs Are Refused"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "VIP customers: 3\nTotal balance: 11311.80"
+}

@@ -13,6 +13,7 @@ const path = require('node:path');
 
 const { loadCatalog, flatten, summarize, neighbors } = require('./core/catalog');
 const { createRenderer } = require('./core/markdown');
+const { lessonImageUri } = require('./core/images');
 const { sourceFromExamples } = require('./core/sources');
 const { highlightCode, markdownHighlight } = require('./core/highlight');
 const {
@@ -39,6 +40,12 @@ const rendererDir = path.join(__dirname, 'renderer');
 // The sample data: the files a lesson works with, and the folder TRAINING_DATA points at.
 const dataDir = path.join(courseRoot, 'samples', 'data');
 const md = createRenderer({ highlight: markdownHighlight });
+
+// The rendering environment for one lesson: its images are read from the folder that holds its lesson.md.
+function lessonRenderEnv(item) {
+  const folder = path.dirname(item.markdownPath);
+  return { resolveImage: (src) => lessonImageUri(folder, src) };
+}
 
 // The file extension for each language's starter and solution files: main.cs and solution.cs, and so on.
 const EXTENSIONS = { csharp: 'cs', python: 'py', javascript: 'js' };
@@ -124,7 +131,7 @@ function openLesson(id) {
     id: item.id,
     kind: item.kind,
     title: item.title,
-    html: md.render(markdown),
+    html: md.render(markdown, lessonRenderEnv(item)),
     markdown,
     previous: previous ? { id: previous.id, title: previous.title } : null,
     next: next ? { id: next.id, title: next.title } : null,
@@ -142,7 +149,7 @@ function openLesson(id) {
     // The sample prompt (prompt.md) is part of the solution, so like the solutions it is sent only once the gate is open.
     // It is rendered here, and the page shows it read-only.
     prompt: gated && solutionsRevealed(state, id) && fs.existsSync(path.join(item.dir, 'prompt.md'))
-      ? md.render(fs.readFileSync(path.join(item.dir, 'prompt.md'), 'utf8'))
+      ? md.render(fs.readFileSync(path.join(item.dir, 'prompt.md'), 'utf8'), lessonRenderEnv(item))
       : null,
   };
 }
@@ -409,7 +416,7 @@ function registerHandlers() {
     saveState(stateFile(), recordSolutionsRevealed(loadState(stateFile()), lessonId));
     // The sample prompt and its reasoning (prompt.md) are part of the solution. They are rendered, and read-only in the page.
     const promptFile = path.join(item.dir, 'prompt.md');
-    const prompt = fs.existsSync(promptFile) ? md.render(fs.readFileSync(promptFile, 'utf8')) : null;
+    const prompt = fs.existsSync(promptFile) ? md.render(fs.readFileSync(promptFile, 'utf8'), lessonRenderEnv(item)) : null;
     return { code: solutions, prompt };
   });
   ipcMain.handle('toolchains:get', () => toolchains());

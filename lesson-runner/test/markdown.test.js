@@ -111,14 +111,23 @@ test('an examples block renders one pane per language, with tabs', () => {
   assert.match(html, /<pre><code class="language-python">print\(1\)/);
 });
 
-test('an examples block missing a language is reported as an error', () => {
+test('an examples block missing a language is reported as an error unless a note says why', () => {
   const md = createRenderer();
   const html = md.render('~~~examples\n```csharp\nx\n```\n```python\ny\n```\n~~~\n');
   assert.match(html, /quiz-error/);
   assert.match(html, /missing JavaScript/);
 });
 
-test('every examples block in the real course has all three languages', () => {
+test('an examples block with a note may show only the languages it has', () => {
+  const md = createRenderer();
+  const html = md.render('~~~examples\nOnly in Python: the reason.\n\n```python\nprint(1)\n```\n~~~\n');
+  assert.doesNotMatch(html, /quiz-error/);
+  assert.match(html, /class="examples-note">Only in Python: the reason\./);
+  assert.match(html, /data-language="python"/);
+  assert.doesNotMatch(html, /data-language="csharp"/);
+});
+
+test('every examples block in the real course is valid, with a note for any missing language', () => {
   const failures = [];
   for (const chapter of loadCatalog(courseRoot)) {
     const files = [chapter.introPath, ...chapter.steps.map((step) => step.markdownPath)];

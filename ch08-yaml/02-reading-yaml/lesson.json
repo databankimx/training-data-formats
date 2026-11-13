@@ -1,0 +1,7 @@
+{
+  "title": "Reading YAML",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Load a YAML list of mappings with each library's safe loader, and see that quoted values stay text.",
+  "prerequisites": ["What YAML Is"]
+}

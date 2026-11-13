@@ -1,0 +1,7 @@
+{
+  "title": "Reading XLSX",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Open a workbook, list its sheets, and read the stored numbers from a named sheet in each language.",
+  "prerequisites": ["What a Workbook Is"]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Shipped Totals",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read the child elements of each order in an XML file, count the shipped orders, and total their amounts exactly, with the parser set to refuse external references.",
+  "prerequisites": ["An External Entity"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Shipped orders: 8\nShipped total: 3649.03"
+}

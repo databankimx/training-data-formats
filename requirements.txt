@@ -26,8 +26,12 @@ et_xmlfile==2.0.0
 # Parquet: reads and writes .parquet files. This package is large, so the first install takes a while.
 pyarrow==26.0.1
 
-# Safe XML parsing: refuses external entities and entity expansion, as the security chapter shows.
-defusedxml==0.7.1
+# Legacy Excel: reads the old binary .xls format. BSD-licensed.
+xlrd==2.0.1
+
+# Safe XML parsing: lxml reads and writes XML. Its parser settings refuse external entities, as the security chapter shows.
+# lxml is BSD-3-Clause; its wheel also bundles GPL-2.0-only components, approved for this tutorial.
+lxml==6.1.0
 
 # Tests: checks for the sample generator and the lesson samples.
 pytest==9.2.0

@@ -1,0 +1,7 @@
+{
+  "title": "What XML Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Name the parts of an XML document, explain namespaces and entities, and state why an XML parser needs settings that refuse external references.",
+  "prerequisites": ["Summary: Fixed-Width Text"]
+}

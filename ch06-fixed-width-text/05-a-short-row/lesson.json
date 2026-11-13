@@ -1,0 +1,7 @@
+{
+  "title": "A Short Row",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Check each line against the layout's length before cutting it, and report a line that is too short to hold every field.",
+  "prerequisites": ["Writing Fixed-Width Text"]
+}

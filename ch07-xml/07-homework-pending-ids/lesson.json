@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Pending Order IDs",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Read the id attribute of each order that has a given status, and report the identifiers in file order.",
+  "prerequisites": ["Homework: Shipped Totals"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Pending orders: 4\nPending ids: 5008, 5014, 5019, 5022"
+}

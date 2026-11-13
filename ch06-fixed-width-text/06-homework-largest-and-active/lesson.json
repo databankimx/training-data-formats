@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Largest Balance and Active Count",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Cut the active flag and the balance from each line by layout position, count the active customers, and report the largest balance exactly as written.",
+  "prerequisites": ["A Short Row"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers: 9\nLargest balance: 4410.00"
+}

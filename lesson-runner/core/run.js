@@ -48,10 +48,11 @@ function prerequisiteProblem(language, courseRoot) {
     if (!fs.existsSync(manifest)) {
       return 'The JavaScript sample setup is missing. Run setup.ps1 in the training-data-formats folder.';
     }
-    // Packages are needed only when the manifest declares some. Samples that use only built-in modules need none.
+    // Packages are needed only when the manifest declares some. Each declared package must be installed, not just the folder.
     const declared = Object.keys(JSON.parse(fs.readFileSync(manifest, 'utf8')).dependencies || {});
-    if (declared.length > 0 && !fs.existsSync(path.join(courseRoot, 'samples', 'node_modules'))) {
-      return 'The JavaScript sample packages are missing. Run setup.ps1 in the training-data-formats folder.';
+    const missing = declared.filter((name) => !fs.existsSync(path.join(courseRoot, 'samples', 'node_modules', name)));
+    if (missing.length > 0) {
+      return 'The JavaScript sample packages are missing (' + missing.join(', ') + '). Run npm install in the samples folder, or setup.ps1.';
     }
   }
   return null;

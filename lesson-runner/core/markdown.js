@@ -78,13 +78,22 @@ function parseExamples(source) {
   return variants;
 }
 
-// Returns the problems with an examples block: missing languages, and languages the course doesn't use.
+// The text an examples block holds outside its code fences. A block that leaves out a language must give its reason here.
+function examplesNote(source) {
+  return source.replace(/```[A-Za-z]+\n[\s\S]*?```/g, '').trim();
+}
+
+// Returns the problems with an examples block. A block may leave out languages, but only with a note that says why, and
+// a language the course doesn't use is always an error.
 function examplesErrors(source) {
   const variants = parseExamples(source);
   const missing = LANGUAGES.filter((language) => !(language in variants));
   const unknown = Object.keys(variants).filter((language) => !LANGUAGES.includes(language));
   const errors = [];
-  if (missing.length > 0) errors.push(`missing ${missing.map((language) => LABELS[language]).join(', ')}`);
+  if (Object.keys(variants).length === 0) errors.push('no code blocks');
+  if (missing.length > 0 && examplesNote(source) === '') {
+    errors.push(`missing ${missing.map((language) => LABELS[language]).join(', ')}, and no note says why`);
+  }
   if (unknown.length > 0) errors.push(`unknown language ${unknown.join(', ')}`);
   return errors;
 }
@@ -119,8 +128,8 @@ function renderQuiz(md, source) {
   );
 }
 
-function renderSpoiler(md, source) {
-  const body = md.render(source);
+function renderSpoiler(md, source, env) {
+  const body = md.render(source, env);
   return (
     `<div class="spoiler-example" data-spoiler>\n` +
     `<button type="button" class="spoiler-toggle" aria-expanded="false">Show example (spoiler)</button>\n` +
@@ -139,11 +148,15 @@ function renderExamples(md, source) {
   }
 
   const variants = parseExamples(source);
-  const tabs = LANGUAGES.map(
+  // Only the languages the block has get a tab and a pane. A missing language is explained by the note above the tabs.
+  const shown = LANGUAGES.filter((language) => language in variants);
+  const note = examplesNote(source);
+  const noteHtml = note ? `<p class="examples-note">${escape(note)}</p>\n` : '';
+  const tabs = shown.map(
     (language) =>
       `<button type="button" class="language-tab" data-language="${language}">${escape(LABELS[language])}</button>`,
   ).join('');
-  const panes = LANGUAGES.map((language) => {
+  const panes = shown.map((language) => {
     const code = variants[language];
     // A sample is editable and runnable in place. The renderer adds the editor over this block. Code with a ghost marker
     // is a read-only suggestion example, so it keeps the faded-text rendering.
@@ -154,7 +167,7 @@ function renderExamples(md, source) {
     return `<div class="example-pane" data-language="${language}" hidden>\n${body}</div>`;
   }).join('\n');
 
-  return `<div class="examples" data-examples>\n<div class="language-tabs">${tabs}</div>\n${panes}\n</div>\n`;
+  return `<div class="examples" data-examples>\n${noteHtml}<div class="language-tabs">${tabs}</div>\n${panes}\n</div>\n`;
 }
 
 // Turns the private marker characters into faded spans. The highlighter's output is tags with text between them, so
@@ -198,10 +211,20 @@ function createRenderer(options = {}) {
     const token = tokens[index];
     const info = (token.info || '').trim();
     if (info === 'quiz') return renderQuiz(md, token.content);
-    if (info === 'spoiler') return renderSpoiler(md, token.content);
+    if (info === 'spoiler') return renderSpoiler(md, token.content, env);
     if (info === 'examples' || info === 'examples source') return renderExamples(md, token.content);
     if (info === 'shadow') return renderShadow(md, token.content);
     return defaultFence(tokens, index, options, env, self);
+  };
+
+  // An image is read from the lesson's own folder, through env.resolveImage, and sent as a data URI. A missing or refused
+  // image shows its path as text, so a broken reference is visible rather than silently blank.
+  md.renderer.rules.image = (tokens, index, options, env) => {
+    const token = tokens[index];
+    const src = token.attrGet('src') || '';
+    const uri = env && typeof env.resolveImage === 'function' ? env.resolveImage(src) : null;
+    if (!uri) return `<span class="missing-image">${md.utils.escapeHtml(`Image not found: ${src}`)}</span>`;
+    return `<img src="${uri}" alt="${md.utils.escapeHtml(token.content || '')}">`;
   };
 
   return md;

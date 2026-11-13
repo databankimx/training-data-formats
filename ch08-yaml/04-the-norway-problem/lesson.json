@@ -1,0 +1,7 @@
+{
+  "title": "The Norway Problem",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read the same plain YAML under different readers and see why NO and on can become booleans, and why quoting removes the ambiguity.",
+  "prerequisites": ["Writing YAML"]
+}

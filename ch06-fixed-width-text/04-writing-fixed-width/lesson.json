@@ -1,0 +1,7 @@
+{
+  "title": "Writing Fixed-Width Text",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Write each value into its column, padding to the layout's width and alignment, in each language.",
+  "prerequisites": ["Bytes and Characters"]
+}

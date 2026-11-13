@@ -1,0 +1,7 @@
+{
+  "title": "Reading XML",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read an XML file with parser settings that refuse external references, find elements by name, and read an attribute and a child's text.",
+  "prerequisites": ["What XML Is"]
+}

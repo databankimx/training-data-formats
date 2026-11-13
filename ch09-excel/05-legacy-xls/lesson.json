@@ -1,0 +1,7 @@
+{
+  "title": "Legacy XLS",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read a legacy binary .xls workbook, and understand why the xlsx libraries in this chapter cannot open it.",
+  "prerequisites": ["Formula Cells"]
+}

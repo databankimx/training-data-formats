@@ -1,0 +1,7 @@
+{
+  "title": "Reading Parquet",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read a Parquet file into rows with the stored types, and see that the decimal balance keeps its two places.",
+  "prerequisites": ["What Parquet Is"]
+}

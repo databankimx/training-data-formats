@@ -1,0 +1,7 @@
+{
+  "title": "What a Workbook Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Describe the parts of an xlsx workbook, the value types a cell can hold, and why the display format is not the stored value.",
+  "prerequisites": ["Summary: YAML"]
+}
