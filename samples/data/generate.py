@@ -1,9 +1,10 @@
 """Builds every sample file for the data formats tutorial from dataset.py.
 
 Run this once, on a machine with the generator's packages installed (see requirements-generator.txt). The
-output is committed, so learners never need to run it. Running it again must produce the same bytes: the
-workbook and Parquet timestamps are fixed, and every text file is written with LF line endings unless a
-file is deliberately defective.
+output is committed, so learners never need to run it. Running it again produces the same text and Parquet
+bytes, because the Parquet timestamps are fixed and every text file is written with LF line endings unless a
+file is deliberately defective. Excel files differ from run to run only in the time stamped on each zip entry,
+so the tests compare their cell contents instead of their bytes.
 
 Customers.xls is the exception. It is committed as a fixed file and is not rebuilt by default, because the
 xlwt writer stamps its document properties with timestamps that change on every run. Rebuild it only on

@@ -4,8 +4,8 @@
 // name given here, then starts the command this module returns.
 //
 // Python and JavaScript use the tutorial's own environment, which setup.ps1 creates. Python runs with the interpreter
-// in the tutorial's .venv. JavaScript runs under samples/, because Node finds packages by walking up from the file's
-// folder, and samples/node_modules holds the tutorial's packages.
+// in the tutorial's .venv. JavaScript runs under samples/. The npm packages are installed once, at the repository root,
+// and Node finds them by walking up from the file's folder.
 
 'use strict';
 
@@ -33,12 +33,23 @@ function runEnvironment(courseRoot) {
   return { ...process.env, TRAINING_DATA: path.join(courseRoot, 'samples', 'data'), CHAIN_DATA: chain };
 }
 
-// The folder a run happens in. JavaScript runs under samples/.runs so that Node finds samples/node_modules. C# and
-// Python run in the user data folder.
+// The folder a run happens in. JavaScript runs under samples/.runs, so that Node finds the packages installed at the
+// repository root. C# and Python run in the user data folder.
 function runFolderFor(language, lessonId, courseRoot, userDataDir) {
   const name = lessonId.replace(/[^A-Za-z0-9-]+/g, '_');
   if (language === 'javascript') return path.join(courseRoot, 'samples', '.runs', name);
   return path.join(userDataDir, 'runs', name);
+}
+
+// True when a package is installed in this folder or in one above it, the way Node looks for packages.
+function isInstalled(name, folder) {
+  let dir = folder;
+  for (;;) {
+    if (fs.existsSync(path.join(dir, 'node_modules', name, 'package.json'))) return true;
+    const parent = path.dirname(dir);
+    if (parent === dir) return false;
+    dir = parent;
+  }
 }
 
 // What must be in place before a language can run, or null when it is ready. The message says what to do.
@@ -53,9 +64,9 @@ function prerequisiteProblem(language, courseRoot) {
     }
     // Packages are needed only when the manifest declares some. Each declared package must be installed, not just the folder.
     const declared = Object.keys(JSON.parse(fs.readFileSync(manifest, 'utf8')).dependencies || {});
-    const missing = declared.filter((name) => !fs.existsSync(path.join(courseRoot, 'samples', 'node_modules', name)));
+    const missing = declared.filter((name) => !isInstalled(name, path.join(courseRoot, 'samples')));
     if (missing.length > 0) {
-      return 'The JavaScript sample packages are missing (' + missing.join(', ') + '). Run npm install in the samples folder, or setup.ps1.';
+      return 'The JavaScript sample packages are missing (' + missing.join(', ') + '). Run npm install in the training-data-formats folder, or setup.ps1.';
     }
   }
   return null;
@@ -75,4 +86,4 @@ function commandFor(language, file, environment) {
   }
 }
 
-module.exports = { FILE_NAMES, commandFor, environmentFor, runEnvironment, runFolderFor, prerequisiteProblem };
+module.exports = { FILE_NAMES, commandFor, environmentFor, runEnvironment, runFolderFor, prerequisiteProblem, isInstalled };
