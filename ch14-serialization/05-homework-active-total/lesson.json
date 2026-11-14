@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Active Total From Typed Records",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Deserialize customers.json into a typed record, count the active customers, and total their balances exactly.",
+  "prerequisites": ["Unknown Fields"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers: 9\nActive total: 11223.60"
+}

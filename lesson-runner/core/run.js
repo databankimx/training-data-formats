@@ -25,9 +25,12 @@ function environmentFor(courseRoot) {
 
 // The environment every run gets: the learner's own environment, plus TRAINING_DATA, which points at the sample data.
 // Samples read their input files from there, so the same paths work in the runner, in the lesson, and on the
-// learner's own machine.
+// learner's own machine. CHAIN_DATA points at the scratch folder the conversion chain passes files through. It is
+// created if it does not exist, so the first step of the chain can always write.
 function runEnvironment(courseRoot) {
-  return { ...process.env, TRAINING_DATA: path.join(courseRoot, 'samples', 'data') };
+  const chain = path.join(courseRoot, 'samples', '.chain');
+  fs.mkdirSync(chain, { recursive: true });
+  return { ...process.env, TRAINING_DATA: path.join(courseRoot, 'samples', 'data'), CHAIN_DATA: chain };
 }
 
 // The folder a run happens in. JavaScript runs under samples/.runs so that Node finds samples/node_modules. C# and

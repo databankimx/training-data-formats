@@ -1,0 +1,7 @@
+{
+  "title": "Glossary",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Give the plain meaning of each term in the tutorial, and the chapter where it first appears.",
+  "prerequisites": ["Format Guide"]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Orders Per Customer",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Group the orders by customer, count the customers with more than one order, and find the largest number of orders held by one customer.",
+  "prerequisites": ["Homework: Shipped Customers"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Customers with more than one order: 10\nMost orders by one customer: 3"
+}

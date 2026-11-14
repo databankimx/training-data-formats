@@ -1,0 +1,7 @@
+{
+  "title": "Golden-File Test",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Compare a program's output with a stored golden text, and check that a changed golden text is detected, so the comparison itself is shown to be able to fail.",
+  "prerequisites": ["Round-Trip Test"]
+}

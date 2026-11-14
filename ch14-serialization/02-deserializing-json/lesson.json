@@ -1,0 +1,7 @@
+{
+  "title": "Deserializing JSON",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read the customers.json array into typed records in each language, and see which type each language gives the balance.",
+  "prerequisites": ["What Serialization Is"]
+}

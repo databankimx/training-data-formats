@@ -1,0 +1,7 @@
+{
+  "title": "XML to YAML",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read the chain's XML and write the customers as YAML, keeping the balance and postal code as text and reading a missing tags element as an empty list.",
+  "prerequisites": ["JSON Lines to XML"]
+}

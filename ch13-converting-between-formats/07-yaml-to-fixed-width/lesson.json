@@ -1,0 +1,7 @@
+{
+  "title": "YAML to Fixed-Width",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Read the chain's YAML and write each customer as a fixed-width line, using an extended layout that holds the address and the tags, and refusing any value wider than its column.",
+  "prerequisites": ["XML to YAML"]
+}

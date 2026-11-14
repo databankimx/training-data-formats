@@ -1,0 +1,7 @@
+{
+  "title": "Round-Trip Serialization",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Write records to JSON from the program's types, read them back, and check that every field survived the round trip.",
+  "prerequisites": ["Deserializing JSON"]
+}

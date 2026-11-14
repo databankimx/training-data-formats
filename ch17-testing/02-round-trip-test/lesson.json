@@ -1,0 +1,7 @@
+{
+  "title": "Round-Trip Test",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Write a fixture record out with its serializer, read it back, and check each field, reporting every check as a pass or a fail.",
+  "prerequisites": ["What a Fixture Is"]
+}

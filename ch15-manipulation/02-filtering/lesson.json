@@ -1,0 +1,7 @@
+{
+  "title": "Filtering Rows",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Keep only the orders whose status is paid, compare the status exactly, and total their amounts with exact decimals.",
+  "prerequisites": ["What Manipulation Is"]
+}

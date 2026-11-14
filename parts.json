@@ -25,7 +25,18 @@
       "title": "Part III - Working with data",
       "chapters": [
         "ch11-schemas-and-validation",
-        "ch12-cleaning"
+        "ch12-cleaning",
+        "ch13-converting-between-formats",
+        "ch14-serialization",
+        "ch15-manipulation",
+        "ch16-security",
+        "ch17-testing"
+      ]
+    },
+    {
+      "title": "Appendix",
+      "chapters": [
+        "ch18-appendix"
       ]
     }
   ]

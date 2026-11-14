@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Refusals",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Run four inline inputs through a JSON reader, refuse those that fail to parse, and count the refused and accepted inputs.",
+  "prerequisites": ["Homework: Balance Cases"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Refused: 2\nAccepted: 2"
+}

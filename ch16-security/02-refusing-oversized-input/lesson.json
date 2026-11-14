@@ -1,0 +1,7 @@
+{
+  "title": "Refusing Oversized Input",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Check the size of a file before reading it, and refuse the file when it is larger than the limit the program allows.",
+  "prerequisites": ["What Untrusted Input Is"]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Refusal Test",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Check that a truncated file is refused and a complete file is accepted, so a test of refusal also shows the program is not refusing everything.",
+  "prerequisites": ["Golden-File Test"]
+}

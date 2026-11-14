@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Tags After a Conversion",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read the tags column as it is stored after conversion, split it back into a list without keeping empty items, and count the tags and the customers with none.",
+  "prerequisites": ["Parquet to CSV"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Tags in the list: 12\nCustomers with no tags: 2"
+}

@@ -1,0 +1,7 @@
+{
+  "title": "What Untrusted Input Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Name the ways a file can harm the program that reads it, state the rule that each defence follows, and explain why logging must not copy the input.",
+  "prerequisites": ["Summary: Manipulation"]
+}

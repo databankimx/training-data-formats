@@ -1,0 +1,7 @@
+{
+  "title": "Safe Logging",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Log each problem with its location and reason, and leave the untrusted value out of the log, so that the input cannot forge or corrupt the log.",
+  "prerequisites": ["Limiting Records"]
+}

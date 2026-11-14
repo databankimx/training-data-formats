@@ -1,0 +1,7 @@
+{
+  "title": "Grouping Rows",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Group the orders by status, count each group, and check that the group counts add back up to the number of rows.",
+  "prerequisites": ["Renaming and Computing"]
+}

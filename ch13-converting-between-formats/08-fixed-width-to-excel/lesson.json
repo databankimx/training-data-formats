@@ -1,0 +1,7 @@
+{
+  "title": "Fixed-Width to Excel",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Read the chain's fixed-width file by position and write the customers to an Excel workbook, with numbers, booleans, and text stored as the right cell types.",
+  "prerequisites": ["YAML to Fixed-Width"]
+}

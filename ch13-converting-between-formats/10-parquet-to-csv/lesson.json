@@ -1,0 +1,7 @@
+{
+  "title": "Parquet to CSV",
+  "runtime": "none",
+  "minutes": 18,
+  "objective": "Read the chain's Parquet, write it back to CSV with the balance at two decimal places, and compare the result with the original customers.csv on values and on text.",
+  "prerequisites": ["Excel to Parquet"]
+}
