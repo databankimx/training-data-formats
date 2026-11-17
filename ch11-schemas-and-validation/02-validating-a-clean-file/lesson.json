@@ -1,0 +1,7 @@
+{
+  "title": "Validating a Clean File",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Check every row of a CSV file against each column's rule, and report the rows that fail.",
+  "prerequisites": ["What a Schema Is"]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Balance Cases",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Write a function that converts a balance's text to whole cents exactly, and check it against four fixed cases.",
+  "prerequisites": ["Refusal Test"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Cases passed: 4\nCases failed: 0"
+}

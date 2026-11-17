@@ -1,0 +1,7 @@
+{
+  "title": "Reading JSON Lines",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read a JSON Lines file one line at a time, parsing each line as its own value, in each language.",
+  "prerequisites": ["What JSON Lines Is"]
+}

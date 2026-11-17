@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Dates in Mixed Forms",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Apply the date rules to a list of mixed dates, convert the ones whose meaning is certain, and send the ambiguous one to review.",
+  "prerequisites": ["Homework: Messy Names and Codes"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Changed dates: 2\nDates needing review: 1"
+}

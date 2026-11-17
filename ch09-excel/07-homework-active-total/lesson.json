@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Active Total from a Workbook",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read the stored number balances from a workbook, count the active customers, and total their balances exactly.",
+  "prerequisites": ["Writing XLSX"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers: 9\nTotal balance: 11311.80"
+}

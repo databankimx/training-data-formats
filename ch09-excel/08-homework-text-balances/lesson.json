@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Balances Stored as Text",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read balances that are stored as text, convert each one exactly, and report how many were text and what they total.",
+  "prerequisites": ["Homework: Active Total from a Workbook"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Text balances: 12\nText total: 11311.80"
+}

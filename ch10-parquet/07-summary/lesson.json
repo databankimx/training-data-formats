@@ -1,0 +1,7 @@
+{
+  "title": "Summary: Parquet",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall how Parquet stores columns and types, how nested columns and empty lists are read, and why decimals and text keep their values.",
+  "prerequisites": ["Homework: Postal Codes Starting with 0"]
+}

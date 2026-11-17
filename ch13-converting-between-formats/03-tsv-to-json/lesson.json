@@ -1,0 +1,7 @@
+{
+  "title": "TSV to JSON",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read the TSV written by the previous link and write the customers as JSON into the chain folder, nesting the address and turning the tags into a list.",
+  "prerequisites": ["CSV to TSV"]
+}

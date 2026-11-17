@@ -1,0 +1,11 @@
+{
+  "title": "Homework: VIP Count and Exact Total",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read a Parquet file, count the customers tagged vip from a list column, and total the decimal balances exactly.",
+  "prerequisites": ["Writing Parquet"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "VIP customers: 3\nTotal balance: 11311.80"
+}

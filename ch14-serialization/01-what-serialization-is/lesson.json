@@ -1,0 +1,7 @@
+{
+  "title": "What Serialization Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Describe the mapping between a file's fields and a program's record, and list the decisions a mapping has to make: names, types, missing values, and unknown fields.",
+  "prerequisites": ["Summary: Converting Between Formats"]
+}

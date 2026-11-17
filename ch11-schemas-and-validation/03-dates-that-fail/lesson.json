@@ -1,0 +1,7 @@
+{
+  "title": "Dates That Fail",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Report the rows of a CSV file whose dates fail the schema, distinguishing a wrong form from an impossible calendar date.",
+  "prerequisites": ["Validating a Clean File"]
+}

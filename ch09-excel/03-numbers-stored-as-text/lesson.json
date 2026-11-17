@@ -1,0 +1,7 @@
+{
+  "title": "Numbers Stored as Text",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Detect balances that are stored as text rather than numbers, and see why a sum of such cells can silently go wrong.",
+  "prerequisites": ["Reading XLSX"]
+}

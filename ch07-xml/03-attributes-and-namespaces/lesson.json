@@ -1,0 +1,7 @@
+{
+  "title": "Attributes and Namespaces",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read an element's namespace, local name, attribute, and child in a namespaced document, and see why the URI matters more than the prefix.",
+  "prerequisites": ["Reading XML"]
+}

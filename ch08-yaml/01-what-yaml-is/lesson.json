@@ -1,0 +1,7 @@
+{
+  "title": "What YAML Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Explain YAML's structure, how a reader decides a plain value's type, and why the loader must be the safe one.",
+  "prerequisites": ["Summary: XML"]
+}

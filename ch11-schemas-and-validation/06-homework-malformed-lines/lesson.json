@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Malformed Order Lines",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Check each line of a JSON Lines file against the schema, report a line that is not valid JSON, and check the status rule on the rest.",
+  "prerequisites": ["Homework: Duplicate Customer IDs"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Lines checked: 24\nLines failing: 1\nLine 7: not valid JSON"
+}

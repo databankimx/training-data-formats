@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Postal Codes Starting with 0",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Read a nested struct column, and count the postal codes that start with 0, keeping the leading zeros of a string column.",
+  "prerequisites": ["Homework: VIP Count and Exact Total"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Postal codes starting with 0: 2"
+}

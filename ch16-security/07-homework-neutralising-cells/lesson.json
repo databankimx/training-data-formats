@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Neutralising Cells",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Apply the neutralising rule to a list of cell values, changing the formulas and leaving the text and the negative numbers alone.",
+  "prerequisites": ["Homework: Row Limit"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Neutralised: 2\nLeft alone: 2"
+}

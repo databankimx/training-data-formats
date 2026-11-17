@@ -1,0 +1,7 @@
+{
+  "title": "What Conversion Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Classify each fact in a conversion as kept, changed in form, or lost, and state the check that proves a conversion is safe.",
+  "prerequisites": ["Summary: Cleaning"]
+}

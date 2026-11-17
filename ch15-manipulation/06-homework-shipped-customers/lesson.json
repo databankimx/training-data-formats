@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Shipped Customers",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Join the shipped orders to their customers, count the customers with at least one shipped order, and total their shipped amounts exactly.",
+  "prerequisites": ["Joining Customers and Orders"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Customers with a shipped order: 7\nShipped total: 3649.03"
+}

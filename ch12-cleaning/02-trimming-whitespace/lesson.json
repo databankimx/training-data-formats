@@ -1,0 +1,7 @@
+{
+  "title": "Trimming Whitespace",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Remove spaces around and inside a value, including a non-breaking space, and record each change.",
+  "prerequisites": ["What Cleaning Is"]
+}

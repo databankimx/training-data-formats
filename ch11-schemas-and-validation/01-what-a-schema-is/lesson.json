@@ -1,0 +1,7 @@
+{
+  "title": "What a Schema Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Write a schema as a set of rules for each column, and explain why a validator reports every failure with its location.",
+  "prerequisites": ["Summary: Parquet"]
+}

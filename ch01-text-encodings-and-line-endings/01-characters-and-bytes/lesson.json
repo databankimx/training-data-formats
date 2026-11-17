@@ -1,0 +1,7 @@
+{
+  "title": "Characters and Bytes",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Explain that a character is not a byte, and show how many bytes one accented letter takes in UTF-8.",
+  "prerequisites": ["Summary: Introduction"]
+}

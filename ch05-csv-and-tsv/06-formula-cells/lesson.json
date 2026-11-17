@@ -1,0 +1,7 @@
+{
+  "title": "Formula Cells",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Find fields that a spreadsheet would treat as formulas, and explain why a CSV reader should report them before the file is opened in one.",
+  "prerequisites": ["Ragged Rows"]
+}

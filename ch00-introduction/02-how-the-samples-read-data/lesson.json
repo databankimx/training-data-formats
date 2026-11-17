@@ -1,0 +1,7 @@
+{
+  "title": "How the Samples Read Data",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Read a sample file through the TRAINING_DATA location, the same way in each language, and know when a sample uses data typed into the code instead.",
+  "prerequisites": ["What This Tutorial Covers"]
+}

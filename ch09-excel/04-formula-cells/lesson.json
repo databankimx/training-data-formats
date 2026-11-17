@@ -1,0 +1,7 @@
+{
+  "title": "Formula Cells",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Find the cells that hold formulas rather than values, and see why a workbook from outside should be checked for them before it is opened in Excel.",
+  "prerequisites": ["Numbers Stored as Text"]
+}

@@ -1,0 +1,5 @@
+[
+  {"customer_id": 1001, "name": "Alice Carter", "email": null, "tags": []},
+  {"customer_id": 1002, "name": "", "email": "chidi.okafor@example.invalid", "tags": null},
+  {"customer_id": 1003, "name": "Renée Dubois", "tags": ["newsletter"]}
+]

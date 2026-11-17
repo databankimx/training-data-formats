@@ -1,0 +1,7 @@
+{
+  "title": "Summary: JSON",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall how JSON reads and writes, why numbers and nulls need care, and how a defective file is reported.",
+  "prerequisites": ["Homework: VIP Customers and Their Cities"]
+}

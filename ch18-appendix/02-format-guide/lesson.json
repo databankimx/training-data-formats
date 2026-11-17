@@ -1,0 +1,7 @@
+{
+  "title": "Format Guide",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Choose a format for a file by the shape of its data, and know which failure each format is prone to.",
+  "prerequisites": ["Cheat Sheet"]
+}

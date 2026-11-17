@@ -1,0 +1,7 @@
+{
+  "title": "The Name Is Not the Format",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Explain why a file's extension can't be trusted, what a signature is, and the order in which a detector should check the formats.",
+  "prerequisites": ["Summary: Text, Encodings, and Line Endings"]
+}

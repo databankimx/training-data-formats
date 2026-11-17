@@ -1,0 +1,7 @@
+{
+  "title": "Reading CSV",
+  "runtime": "none",
+  "minutes": 15,
+  "objective": "Parse a CSV file with a quote-aware reader, skip the header, and read the fields of each record.",
+  "prerequisites": ["What CSV Is"]
+}

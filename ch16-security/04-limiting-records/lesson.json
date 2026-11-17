@@ -1,0 +1,7 @@
+{
+  "title": "Limiting Records",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Stop reading a streamed file at a limit on the number of lines, so that a huge or endless input cannot exhaust the program.",
+  "prerequisites": ["Neutralising Formulas"]
+}

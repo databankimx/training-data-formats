@@ -1,0 +1,7 @@
+{
+  "title": "Renaming and Computing",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Rename the customer fields into a new shape, and compute each balance in whole cents with exact arithmetic.",
+  "prerequisites": ["Filtering Rows"]
+}

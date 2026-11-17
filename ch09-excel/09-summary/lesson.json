@@ -1,0 +1,7 @@
+{
+  "title": "Summary: Excel",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall the parts of a workbook, the stored types of cells, numbers stored as text, formula cells, and which libraries read which formats.",
+  "prerequisites": ["Homework: Balances Stored as Text"]
+}

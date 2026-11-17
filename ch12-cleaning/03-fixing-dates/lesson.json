@@ -1,0 +1,7 @@
+{
+  "title": "Fixing Dates",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Convert only the dates whose meaning is certain to the ISO form, and send the rest to review with a reason.",
+  "prerequisites": ["Trimming Whitespace"]
+}

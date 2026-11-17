@@ -1,0 +1,7 @@
+{
+  "title": "Nested Columns",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read a struct column and a list column from a Parquet file, and count the rows whose list is empty.",
+  "prerequisites": ["Reading Parquet"]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Neutralising Formulas",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Find the cells that a spreadsheet would run, prefix each one so it is shown as text, and leave ordinary negative numbers alone.",
+  "prerequisites": ["Refusing Oversized Input"]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "What a Fixture Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Define a fixture, an expected result, and a check, and state what a passing test does and does not prove.",
+  "prerequisites": ["Summary: Security With Untrusted Input"]
+}

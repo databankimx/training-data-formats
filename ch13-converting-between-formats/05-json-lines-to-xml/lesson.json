@@ -1,0 +1,7 @@
+{
+  "title": "JSON Lines to XML",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read the chain's JSON Lines and write the customers as XML, with the identifier as an attribute, the address nested, and each tag as its own element.",
+  "prerequisites": ["JSON to JSON Lines"]
+}

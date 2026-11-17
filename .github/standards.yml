@@ -1,0 +1,11 @@
+# DataBank Standards Policy Configuration
+# See Custom-Dev-Developer-Guide.md for full rule documentation.
+#
+# Dependency and generated folders are not project code and are excluded
+# from standards enforcement.
+python:
+  excluded_globs:
+    - "**/.venv/**"
+    - "**/node_modules/**"
+    - "samples/.runs/**"
+    - "samples/.chain/**"

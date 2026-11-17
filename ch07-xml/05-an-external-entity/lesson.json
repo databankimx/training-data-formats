@@ -1,0 +1,7 @@
+{
+  "title": "An External Entity",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read a document that declares an external entity, under each language's safe settings, and see what each parser does with the reference.",
+  "prerequisites": ["Writing XML"]
+}

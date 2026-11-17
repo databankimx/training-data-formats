@@ -1,0 +1,7 @@
+{
+  "title": "Quoting and Newlines",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read a quoted field that contains a line break, and see why counting lines is not the same as counting records.",
+  "prerequisites": ["Reading CSV"]
+}

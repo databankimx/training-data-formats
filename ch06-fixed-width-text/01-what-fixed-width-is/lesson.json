@@ -1,0 +1,7 @@
+{
+  "title": "What Fixed-Width Text Is",
+  "runtime": "none",
+  "minutes": 10,
+  "objective": "Read a layout description, locate a field by its position, and explain why a short line or a multibyte character can misplace the data.",
+  "prerequisites": ["Summary: CSV and TSV"]
+}

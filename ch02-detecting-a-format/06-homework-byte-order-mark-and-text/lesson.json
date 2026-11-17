@@ -1,0 +1,11 @@
+{
+  "title": "Homework: The Byte-Order Mark and Text",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Extend a detector so that it reports a text file's byte-order mark, and leaves the kind of a file unchanged.",
+  "prerequisites": ["Homework: Detect Three Files"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "customers-utf8-bom.csv: text, with byte-order mark\ncustomers-windows-1252.csv: text\nconfig-norway.yaml: text"
+}

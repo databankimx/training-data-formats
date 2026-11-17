@@ -1,0 +1,7 @@
+{
+  "title": "Large Integers",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Read integers too large for a 64-bit float and see that each language keeps a different number of digits.",
+  "prerequisites": ["Nested Objects"]
+}

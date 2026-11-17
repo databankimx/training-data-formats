@@ -1,0 +1,7 @@
+{
+  "title": "Removing Duplicates",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Remove a repeated row only when it is an exact copy, and keep and flag a repeat that differs in any field.",
+  "prerequisites": ["Filling Nulls"]
+}

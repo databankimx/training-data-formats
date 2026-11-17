@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders>
+  <order id="5001">
+    <customer_id>1001</customer_id>
+    <order_date>2025-01-08</order_date>
+    <amount>129.99</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5002">
+    <customer_id>1001</customer_id>
+    <order_date>2025-03-22</order_date>
+    <amount>45.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5003">
+    <customer_id>1002</customer_id>
+    <order_date>2025-02-14</order_date>
+    <amount>310.50</amount>
+    <status>refunded</status>
+  </order>
+  <order id="5004">
+    <customer_id>1003</customer_id>
+    <order_date>2025-02-28</order_date>
+    <amount>18.75</amount>
+    <status>paid</status>
+  </order>
+  <order id="5005">
+    <customer_id>1003</customer_id>
+    <order_date>2025-05-03</order_date>
+    <amount>260.00</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5006">
+    <customer_id>1004</customer_id>
+    <order_date>2025-01-20</order_date>
+    <amount>980.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5007">
+    <customer_id>1004</customer_id>
+    <order_date>2025-04-11</order_date>
+    <amount>1520.40</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5008">
+    <customer_id>1004</customer_id>
+    <order_date>2025-09-30</order_date>
+    <amount>75.10</amount>
+    <status>pending</status>
+  </order>
+  <order id="5009">
+    <customer_id>1005</customer_id>
+    <order_date>2025-06-07</order_date>
+    <amount>23.45</amount>
+    <status>paid</status>
+  </order>
+  <order id="5010">
+    <customer_id>1006</customer_id>
+    <order_date>2025-03-01</order_date>
+    <amount>412.00</amount>
+    <status>refunded</status>
+  </order>
+  <order id="5011">
+    <customer_id>1007</customer_id>
+    <order_date>2025-07-19</order_date>
+    <amount>88.80</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5012">
+    <customer_id>1008</customer_id>
+    <order_date>2025-01-03</order_date>
+    <amount>2310.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5013">
+    <customer_id>1008</customer_id>
+    <order_date>2025-02-17</order_date>
+    <amount>640.25</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5014">
+    <customer_id>1008</customer_id>
+    <order_date>2025-10-14</order_date>
+    <amount>15.00</amount>
+    <status>pending</status>
+  </order>
+  <order id="5015">
+    <customer_id>1009</customer_id>
+    <order_date>2025-08-02</order_date>
+    <amount>205.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5016">
+    <customer_id>1009</customer_id>
+    <order_date>2025-08-29</order_date>
+    <amount>99.99</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5017">
+    <customer_id>1010</customer_id>
+    <order_date>2025-04-25</order_date>
+    <amount>150.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5018">
+    <customer_id>1011</customer_id>
+    <order_date>2025-05-16</order_date>
+    <amount>780.60</amount>
+    <status>shipped</status>
+  </order>
+  <order id="5019">
+    <customer_id>1011</customer_id>
+    <order_date>2025-11-04</order_date>
+    <amount>42.00</amount>
+    <status>pending</status>
+  </order>
+  <order id="5020">
+    <customer_id>1012</customer_id>
+    <order_date>2025-09-09</order_date>
+    <amount>61.25</amount>
+    <status>paid</status>
+  </order>
+  <order id="5021">
+    <customer_id>1012</customer_id>
+    <order_date>2025-09-10</order_date>
+    <amount>61.25</amount>
+    <status>refunded</status>
+  </order>
+  <order id="5022">
+    <customer_id>1002</customer_id>
+    <order_date>2025-12-01</order_date>
+    <amount>8.50</amount>
+    <status>pending</status>
+  </order>
+  <order id="5023">
+    <customer_id>1005</customer_id>
+    <order_date>2026-01-15</order_date>
+    <amount>310.00</amount>
+    <status>paid</status>
+  </order>
+  <order id="5024">
+    <customer_id>1007</customer_id>
+    <order_date>2026-03-03</order_date>
+    <amount>129.00</amount>
+    <status>shipped</status>
+  </order>
+</orders>

@@ -1,0 +1,7 @@
+{
+  "title": "Summary: XML",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall XML's tree structure, namespaces, the external entity risk, and the parser settings that refuse it.",
+  "prerequisites": ["Homework: Pending Order IDs"]
+}

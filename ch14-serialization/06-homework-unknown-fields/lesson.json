@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Counting Unknown Fields",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Read records that carry fields the record type does not declare, count the records, and count every unknown field without dropping any.",
+  "prerequisites": ["Homework: Active Total From Typed Records"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Records: 3\nUnknown fields: 3"
+}

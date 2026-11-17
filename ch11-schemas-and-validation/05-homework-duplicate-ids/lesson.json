@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Duplicate Customer IDs",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Check the customer_id rule across a file, report each repeated identifier with its line, and count the rows that fail.",
+  "prerequisites": ["Validating JSON Nulls"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Rows checked: 14\nRows failing: 2\nLine 14: customer_id 1003 is a duplicate\nLine 15: customer_id 1007 is a duplicate"
+}

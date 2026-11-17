@@ -1,0 +1,8 @@
+countries:
+  - code: NO
+    name: Norway
+  - code: DE
+    name: Germany
+settings:
+  notifications: on
+  retry: 3

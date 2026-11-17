@@ -1,0 +1,7 @@
+{
+  "title": "The Byte-Order Mark",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Recognise the UTF-8 byte-order mark at the start of a file, and know why it appears in the first column name of some exports.",
+  "prerequisites": ["Characters and Bytes"]
+}

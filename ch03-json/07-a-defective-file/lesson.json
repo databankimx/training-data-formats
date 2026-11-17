@@ -1,0 +1,7 @@
+{
+  "title": "A Defective File",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Catch a parse failure in each language, and tell a file that is not valid JSON from one that is not JSON at all.",
+  "prerequisites": ["Nulls and Missing Keys"]
+}

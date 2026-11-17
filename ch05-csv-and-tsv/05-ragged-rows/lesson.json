@@ -1,0 +1,7 @@
+{
+  "title": "Ragged Rows",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Find the rows whose field count differs from the header, and report them by line number rather than guessing what they mean.",
+  "prerequisites": ["Writing CSV"]
+}

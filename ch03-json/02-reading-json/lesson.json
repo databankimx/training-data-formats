@@ -1,0 +1,7 @@
+{
+  "title": "Reading JSON",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read a JSON array from a file, and access its records and their fields in each language.",
+  "prerequisites": ["What JSON Is"]
+}

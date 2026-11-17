@@ -1,0 +1,7 @@
+{
+  "title": "Writing XLSX",
+  "runtime": "none",
+  "minutes": 14,
+  "objective": "Create a workbook from values in the code, save it, reopen it, and check that numbers and booleans keep their types.",
+  "prerequisites": ["Legacy XLS"]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Count the Line Endings",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Count the lines in a file, and split them into CRLF and LF-only, by reading the raw bytes.",
+  "prerequisites": ["Line Endings"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Lines: 13\nCRLF: 6\nLF only: 7"
+}

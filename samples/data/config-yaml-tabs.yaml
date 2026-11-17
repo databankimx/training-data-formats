@@ -1,0 +1,3 @@
+settings:
+	retry: 3
+	timeout: 30

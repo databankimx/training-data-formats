@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Active Total, Skipping Short Lines",
+  "runtime": "multi",
+  "minutes": 30,
+  "objective": "Read a fixed-width file that has a short line, skip the line that is too short, and total the balances of the active customers exactly.",
+  "prerequisites": ["Homework: Largest Balance and Active Count"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers counted: 8\nActive total: 10243.50\nSkipped short lines: 1"
+}

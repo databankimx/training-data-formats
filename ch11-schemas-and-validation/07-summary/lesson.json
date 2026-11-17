@@ -1,0 +1,7 @@
+{
+  "title": "Summary: Schemas and Validation",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall how a schema is written as rules, why every rule is checked on every row, and how nulls, missing keys, and bad dates are reported.",
+  "prerequisites": ["Homework: Malformed Order Lines"]
+}

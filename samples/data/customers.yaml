@@ -1,0 +1,156 @@
+- customer_id: 1001
+  name: Alice Carter
+  email: alice.carter@example.invalid
+  signup_date: '2021-03-14'
+  balance: '1250.75'
+  active: true
+  country_code: US
+  address:
+    street: 12 Maple Street
+    city: Springfield
+    postal_code: '62704'
+  tags:
+  - vip
+  - newsletter
+- customer_id: 1002
+  name: Okafor, Chidi
+  email: chidi.okafor@example.invalid
+  signup_date: '2020-11-02'
+  balance: '0.00'
+  active: false
+  country_code: GB
+  address:
+    street: 14 Harbour Road
+    city: Bristol
+    postal_code: BS1 4DJ
+  tags: []
+- customer_id: 1003
+  name: Renée Dubois
+  email: renee.dubois@example.invalid
+  signup_date: '2022-06-30'
+  balance: '980.10'
+  active: true
+  country_code: FR
+  address:
+    street: 7 Rue des Lilas
+    city: Lyon
+    postal_code: '69001'
+  tags:
+  - newsletter
+- customer_id: 1004
+  name: Lars Haugen
+  email: lars.haugen@example.invalid
+  signup_date: '2019-09-09'
+  balance: '4410.00'
+  active: true
+  country_code: 'NO'
+  address:
+    street: Storgata 5
+    city: Oslo
+    postal_code: '0155'
+  tags:
+  - vip
+- customer_id: 1005
+  name: Mei Lin
+  email: mei.lin@example.invalid
+  signup_date: '2023-01-18'
+  balance: '75.50'
+  active: true
+  country_code: SG
+  address:
+    street: 21 Orchard Road
+    city: Singapore
+    postal_code: '238863'
+  tags:
+  - new
+- customer_id: 1006
+  name: Samuel Osei
+  email: samuel.osei@example.invalid
+  signup_date: '2021-07-22'
+  balance: '0.00'
+  active: false
+  country_code: DE
+  address:
+    street: Hauptstraße 3
+    city: Berlin
+    postal_code: '10115'
+  tags:
+  - dormant
+- customer_id: 1007
+  name: Ana Ribeiro
+  email: ana.ribeiro@example.invalid
+  signup_date: '2024-02-05'
+  balance: '230.00'
+  active: true
+  country_code: ES
+  address:
+    street: 9 Calle Mayor
+    city: Madrid
+    postal_code: '28013'
+  tags: []
+- customer_id: 1008
+  name: James O'Connor
+  email: james.oconnor@example.invalid
+  signup_date: '2018-04-27'
+  balance: '3125.25'
+  active: true
+  country_code: IE
+  address:
+    street: 2 Quay Street
+    city: Galway
+    postal_code: H91 F2K3
+  tags:
+  - vip
+  - newsletter
+- customer_id: 1009
+  name: Yuki Tanaka
+  email: yuki.tanaka@example.invalid
+  signup_date: '2022-10-11'
+  balance: '512.00'
+  active: true
+  country_code: JP
+  address:
+    street: 1-2-3 Shibuya
+    city: Tokyo
+    postal_code: 150-0002
+  tags:
+  - new
+- customer_id: 1010
+  name: Priya Nair
+  email: priya.nair@example.invalid
+  signup_date: '2020-05-16'
+  balance: '88.20'
+  active: false
+  country_code: AU
+  address:
+    street: 45 George Street
+    city: Sydney
+    postal_code: '2000'
+  tags:
+  - dormant
+- customer_id: 1011
+  name: Tomasz Wójcik
+  email: tomasz.wojcik@example.invalid
+  signup_date: '2021-12-01'
+  balance: '640.00'
+  active: true
+  country_code: PL
+  address:
+    street: ul. Piotrkowska 10
+    city: Łódź
+    postal_code: 90-001
+  tags:
+  - newsletter
+- customer_id: 1012
+  name: Grace Mwangi
+  email: grace.mwangi@example.invalid
+  signup_date: '2025-08-19'
+  balance: '0.00'
+  active: true
+  country_code: KE
+  address:
+    street: 80 Kenyatta Avenue
+    city: Nairobi
+    postal_code: '00100'
+  tags:
+  - new

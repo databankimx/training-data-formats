@@ -1,0 +1,7 @@
+{
+  "title": "What Parquet Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Describe how a Parquet file stores columns, row groups, and its footer, and explain how logical types such as decimals, lists, and structs are kept.",
+  "prerequisites": ["Summary: Excel"]
+}

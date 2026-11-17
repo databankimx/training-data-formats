@@ -1,0 +1,7 @@
+{
+  "title": "Tabs Are Refused",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Recognise a YAML file that the parser refuses because it uses a tab for indentation, and catch only the parser's own error.",
+  "prerequisites": ["The Norway Problem"]
+}

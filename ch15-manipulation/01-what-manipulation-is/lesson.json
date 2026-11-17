@@ -1,0 +1,7 @@
+{
+  "title": "What Manipulation Is",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Name the five manipulations, state what each one does to the rows and columns, and explain why a join can silently drop data.",
+  "prerequisites": ["Summary: Serialization and Deserialization"]
+}

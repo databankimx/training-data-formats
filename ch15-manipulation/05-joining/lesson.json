@@ -1,0 +1,7 @@
+{
+  "title": "Joining Customers and Orders",
+  "runtime": "none",
+  "minutes": 16,
+  "objective": "Join orders to customers on customer_id, report the customers with no orders, and total the orders of one country exactly.",
+  "prerequisites": ["Grouping Rows"]
+}

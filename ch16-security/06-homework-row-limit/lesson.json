@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Row Limit",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Accept the rows of customers.csv up to a limit, refuse the rows beyond it, and report both counts.",
+  "prerequisites": ["Safe Logging"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Rows accepted: 10\nRows refused: 2"
+}

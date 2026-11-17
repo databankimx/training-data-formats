@@ -1,0 +1,7 @@
+{
+  "title": "Writing JSON",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Turn a value in the program into indented JSON text, and see how each language writes null, booleans, and empty lists.",
+  "prerequisites": ["Reading JSON"]
+}

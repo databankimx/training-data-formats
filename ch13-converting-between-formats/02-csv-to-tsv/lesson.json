@@ -1,0 +1,7 @@
+{
+  "title": "CSV to TSV",
+  "runtime": "none",
+  "minutes": 12,
+  "objective": "Read customers.csv and write the same rows as customers.tsv into the chain folder, the first link of the conversion loop.",
+  "prerequisites": ["What Conversion Is"]
+}

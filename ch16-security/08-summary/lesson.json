@@ -1,0 +1,7 @@
+{
+  "title": "Summary: Security With Untrusted Input",
+  "runtime": "none",
+  "minutes": 8,
+  "objective": "Recall the five ways an input can harm a program, the defence for each, and why the limit and the log must be designed with the input in mind.",
+  "prerequisites": ["Homework: Neutralising Cells"]
+}

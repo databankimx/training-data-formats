@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+  <customer id="1001">
+    <name>Alice Carter</name>
+    <email>alice.carter@example.invalid</email>
+    <signup_date>2021-03-14</signup_date>
+    <balance>1250.75</balance>
+    <active>true</active>
+    <country_code>US</country_code>
+    <address>
+      <street>12 Maple Street</street>
+      <city>Springfield</city>
+      <postal_code>62704</postal_code>
+    </address>
+    <tags>
+      <tag>vip</tag>
+      <tag>newsletter</tag>
+    </tags>
+  </customer>
+  <customer id="1002">
+    <name>Okafor, Chidi</name>
+    <email>chidi.okafor@example.invalid</email>
+    <signup_date>2020-11-02</signup_date>
+    <balance>0.00</balance>
+    <active>false</active>
+    <country_code>GB</country_code>
+    <address>
+      <street>14 Harbour Road</street>
+      <city>Bristol</city>
+      <postal_code>BS1 4DJ</postal_code>
+    </address>
+    <tags />
+  </customer>
+  <customer id="1003">
+    <name>Renée Dubois</name>
+    <email>renee.dubois@example.invalid</email>
+    <signup_date>2022-06-30</signup_date>
+    <balance>980.10</balance>
+    <active>true</active>
+    <country_code>FR</country_code>
+    <address>
+      <street>7 Rue des Lilas</street>
+      <city>Lyon</city>
+      <postal_code>69001</postal_code>
+    </address>
+    <tags>
+      <tag>newsletter</tag>
+    </tags>
+  </customer>
+  <customer id="1004">
+    <name>Lars Haugen</name>
+    <email>lars.haugen@example.invalid</email>
+    <signup_date>2019-09-09</signup_date>
+    <balance>4410.00</balance>
+    <active>true</active>
+    <country_code>NO</country_code>
+    <address>
+      <street>Storgata 5</street>
+      <city>Oslo</city>
+      <postal_code>0155</postal_code>
+    </address>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+  </customer>
+  <customer id="1005">
+    <name>Mei Lin</name>
+    <email>mei.lin@example.invalid</email>
+    <signup_date>2023-01-18</signup_date>
+    <balance>75.50</balance>
+    <active>true</active>
+    <country_code>SG</country_code>
+    <address>
+      <street>21 Orchard Road</street>
+      <city>Singapore</city>
+      <postal_code>238863</postal_code>
+    </address>
+    <tags>
+      <tag>new</tag>
+    </tags>
+  </customer>
+  <customer id="1006">
+    <name>Samuel Osei</name>
+    <email>samuel.osei@example.invalid</email>
+    <signup_date>2021-07-22</signup_date>
+    <balance>0.00</balance>
+    <active>false</active>
+    <country_code>DE</country_code>
+    <address>
+      <street>Hauptstraße 3</street>
+      <city>Berlin</city>
+      <postal_code>10115</postal_code>
+    </address>
+    <tags>
+      <tag>dormant</tag>
+    </tags>
+  </customer>
+  <customer id="1007">
+    <name>Ana Ribeiro</name>
+    <email>ana.ribeiro@example.invalid</email>
+    <signup_date>2024-02-05</signup_date>
+    <balance>230.00</balance>
+    <active>true</active>
+    <country_code>ES</country_code>
+    <address>
+      <street>9 Calle Mayor</street>
+      <city>Madrid</city>
+      <postal_code>28013</postal_code>
+    </address>
+    <tags />
+  </customer>
+  <customer id="1008">
+    <name>James O'Connor</name>
+    <email>james.oconnor@example.invalid</email>
+    <signup_date>2018-04-27</signup_date>
+    <balance>3125.25</balance>
+    <active>true</active>
+    <country_code>IE</country_code>
+    <address>
+      <street>2 Quay Street</street>
+      <city>Galway</city>
+      <postal_code>H91 F2K3</postal_code>
+    </address>
+    <tags>
+      <tag>vip</tag>
+      <tag>newsletter</tag>
+    </tags>
+  </customer>
+  <customer id="1009">
+    <name>Yuki Tanaka</name>
+    <email>yuki.tanaka@example.invalid</email>
+    <signup_date>2022-10-11</signup_date>
+    <balance>512.00</balance>
+    <active>true</active>
+    <country_code>JP</country_code>
+    <address>
+      <street>1-2-3 Shibuya</street>
+      <city>Tokyo</city>
+      <postal_code>150-0002</postal_code>
+    </address>
+    <tags>
+      <tag>new</tag>
+    </tags>
+  </customer>
+  <customer id="1010">
+    <name>Priya Nair</name>
+    <email>priya.nair@example.invalid</email>
+    <signup_date>2020-05-16</signup_date>
+    <balance>88.20</balance>
+    <active>false</active>
+    <country_code>AU</country_code>
+    <address>
+      <street>45 George Street</street>
+      <city>Sydney</city>
+      <postal_code>2000</postal_code>
+    </address>
+    <tags>
+      <tag>dormant</tag>
+    </tags>
+  </customer>
+  <customer id="1011">
+    <name>Tomasz Wójcik</name>
+    <email>tomasz.wojcik@example.invalid</email>
+    <signup_date>2021-12-01</signup_date>
+    <balance>640.00</balance>
+    <active>true</active>
+    <country_code>PL</country_code>
+    <address>
+      <street>ul. Piotrkowska 10</street>
+      <city>Łódź</city>
+      <postal_code>90-001</postal_code>
+    </address>
+    <tags>
+      <tag>newsletter</tag>
+    </tags>
+  </customer>
+  <customer id="1012">
+    <name>Grace Mwangi</name>
+    <email>grace.mwangi@example.invalid</email>
+    <signup_date>2025-08-19</signup_date>
+    <balance>0.00</balance>
+    <active>true</active>
+    <country_code>KE</country_code>
+    <address>
+      <street>80 Kenyatta Avenue</street>
+      <city>Nairobi</city>
+      <postal_code>00100</postal_code>
+    </address>
+    <tags>
+      <tag>new</tag>
+    </tags>
+  </customer>
+</customers>

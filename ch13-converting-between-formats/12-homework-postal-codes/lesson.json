@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Postal Codes Through a Number",
+  "runtime": "multi",
+  "minutes": 20,
+  "objective": "Convert each all-digit postal code to a number and back to text, and count the codes that come back different.",
+  "prerequisites": ["Homework: Tags After a Conversion"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Postal codes that change: 2"
+}

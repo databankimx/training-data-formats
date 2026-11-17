@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Shipped Orders",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Read a JSON Lines file, count the records with one status, and report the lines that could not be parsed.",
+  "prerequisites": ["A Malformed Line"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Shipped orders: 7\nSkipped lines: 1"
+}

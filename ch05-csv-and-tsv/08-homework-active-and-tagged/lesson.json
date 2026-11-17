@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Active and Tagged",
+  "runtime": "multi",
+  "minutes": 25,
+  "objective": "Parse customers.csv with a quote-aware reader, and count the active customers and the customers who have at least one tag.",
+  "prerequisites": ["TSV"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Active customers: 9\nTagged customers: 10"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Homework: Paid Total",
+  "runtime": "multi",
+  "minutes": 30,
+  "objective": "Sum the amounts of the paid orders from a JSON Lines file, reading the amounts as exact decimals and skipping the damaged line.",
+  "prerequisites": ["Homework: Shipped Orders"],
+  "section": "homework",
+  "spoiler": true,
+  "languages": ["csharp", "python", "javascript"],
+  "expected": "Paid orders: 9\nPaid total: 4103.45"
+}
