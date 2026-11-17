@@ -1,0 +1,8 @@
+# Default owners for the entire repository.
+* @bbutler-databank @smclean-databank
+# CI/CD and repository automation.
+.github/ @bbutler-databank
+.github/workflows/ @bbutler-databank
+# Test suite ownership.
+lesson-runner/test/ @bbutler-databank @smclean-databank
+samples/data/test_samples.py @bbutler-databank @smclean-databank

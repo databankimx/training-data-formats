@@ -27,11 +27,13 @@ et_xmlfile==2.0.0
 pyarrow==26.0.1
 
 # Legacy Excel: reads the old binary .xls format. BSD-licensed.
-xlrd==2.0.1
+xlrd==2.0.2
+# Legacy Excel writer: the sample generator uses it to write the .xls sample. BSD-licensed.
+xlwt==1.3.0
 
 # Safe XML parsing: lxml reads and writes XML. Its parser settings refuse external entities, as the security chapter shows.
 # lxml is BSD-3-Clause; its wheel also bundles GPL-2.0-only components, approved for this tutorial.
-lxml==6.1.0
+lxml==6.1.3
 
 # Tests: checks for the sample generator and the lesson samples.
 pytest==9.2.0
