@@ -35,7 +35,12 @@
     },
     "vscode": {
       "install": true,
-      "winget": "Microsoft.VisualStudioCode"
+      "winget": "Microsoft.VisualStudioCode",
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-python.python"
+      ]
     },
     "notepadPlusPlus": {
       "install": true,
