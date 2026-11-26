@@ -32,6 +32,14 @@
       "install": true,
       "pinned": "10",
       "winget": "Microsoft.DotNet.SDK.10"
+    },
+    "vscode": {
+      "install": true,
+      "winget": "Microsoft.VisualStudioCode"
+    },
+    "notepadPlusPlus": {
+      "install": true,
+      "winget": "Notepad++.Notepad++"
     }
   },
   "steps": [
@@ -65,7 +73,7 @@
     }
   ],
   "launch": {
-    "ide": "none",
+    "ide": "vscode",
     "kind": "electron",
     "folder": "lesson-runner"
   }

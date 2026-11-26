@@ -74,9 +74,10 @@ npm start
 * Node.js 24 or later, for the runner and the JavaScript samples
 * Python 3.12 or later, for the Python samples
 * The .NET 10 SDK, for the C# samples
-* The Visual Studio Build Tools with the C++ workload, the fallback if Electron's download fails
+* Visual Studio Code, for editing the lessons and samples
+* The Visual Studio Build Tools with the C++ workload, installed only if Electron's download fails
 
-The setup script installs anything that's missing. The Build Tools need an Administrator PowerShell.
+The setup script installs anything that's missing. The Build Tools are installed only when they're needed, and they need an Administrator PowerShell.
 
 ---
 
@@ -168,7 +169,8 @@ The samples read their files through the `TRAINING_DATA` environment variable, w
 * The runner and the setup script run on Windows only.
 * The first run of a C# sample downloads its NuGet packages, so it needs internet access.
 * The bad sample files are malformed on purpose. Some steps show a failure until your code handles it.
-* The Visual Studio Build Tools are the fallback when Electron's download fails, and installing them needs an Administrator PowerShell.
+* The Visual Studio Build Tools are installed automatically only when Electron's download fails, and installing them needs an Administrator PowerShell.
+* The first time you run a C# file, the .NET SDK may print a long welcome message and wait. If it does, press Escape to stop the program, then run it again. After that first run, C# files run as expected.
 
 ---
 

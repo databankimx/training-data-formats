@@ -12,7 +12,8 @@ The tutorial lives at [databankimx/training-data-formats](https://github.com/dat
 - checks for Node.js 24 or later, and installs the LTS release with winget if it's missing
 - checks for Python 3.12 or later, and installs it with winget if it's missing
 - checks for the .NET 10 SDK, which runs the C# samples, and installs it with winget if it's missing
-- checks for the C++ Build Tools, which are the fallback if Electron's download fails
+- checks for Visual Studio Code, and installs it with winget if it's missing
+- checks for the C++ Build Tools only if Electron's download fails, and installs them then
 - creates the Python virtual environment in `.venv` at the repository root, and installs `requirements.txt` into it
 - installs every npm package in one step, from `package.json` and `package-lock.json` at the repository root, and makes sure the Electron binary is present
 
@@ -26,7 +27,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 
 The `-ExecutionPolicy Bypass` part lets this one script run. It doesn't change any setting on your machine.
 
-The C++ Build Tools are about 4 to 5 GB and can take several minutes. They need an **Administrator** PowerShell. If you aren't an administrator, the script stops at that step and says so. Open PowerShell as Administrator, and run the script again.
+The C++ Build Tools are installed only if Electron's download fails. They are about 4 to 5 GB and can take several minutes, and they need an **Administrator** PowerShell. If you aren't an administrator, the script stops at that step and says so. Open PowerShell as Administrator, and run the script again.
 
 If you only want to check your setup, without installing anything, add `-SkipInstall`:
 
@@ -48,6 +49,7 @@ If you'd rather not run the script, these are the same steps by hand. Run them f
    - Node.js 24 or later, from [nodejs.org](https://nodejs.org)
    - Python 3.12 or later, from [python.org](https://www.python.org)
    - The .NET 10 SDK, from [dotnet.microsoft.com](https://dotnet.microsoft.com)
+   - Visual Studio Code, from [code.visualstudio.com](https://code.visualstudio.com)
    - The Visual Studio Build Tools with the C++ workload, only if Electron's download fails later
 2. Install the npm packages. This one command installs the runner's packages and the samples' packages together:
 
@@ -121,6 +123,7 @@ Sample runs are written to `samples\.runs` and the conversion chain to `samples\
 - **Setup says `npm install` failed.** Check your network access to the npm registry, then run the script again. Don't delete `package-lock.json` to get past the error.
 - **Setup says the Electron binary still won't download.** Check your network access to github.com, and that the C++ Build Tools are installed. Then run the script again.
 - **`npm install` shows deprecation warnings.** They come from `exceljs`'s dependencies, and they're notices about old packages, not vulnerabilities. The `uuid` package is pinned to 11.1.1 by an override in `package.json` to clear an advisory, so don't remove the override.
+- **The first C# run prints a long .NET welcome message and waits.** This happens once, the first time the .NET SDK runs on your computer. Press Escape to stop it, then run the file again. After that, C# runs as expected.
 - **A C# sample fails the first time with a package error.** The C# samples download their NuGet packages on the first run, so that run needs internet access. Run it again once you're online.
 - **`pip install -r requirements.txt` fails.** Check your network access to the Python package index. If the failure is in `pyarrow`, run the install again, because its download is large.
 - **`npm start` fails with "package.json not found".** You're in the repository's root folder. Change to `lesson-runner` first.
