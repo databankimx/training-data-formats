@@ -3,7 +3,7 @@
   "name": "Working With Data Formats",
   "folder": "training-data-formats",
   "repoUrl": "https://github.com/databankimx/training-data-formats.git",
-  "branch": "dev",
+  "branch": "main",
   "baseDirectory": "C:\\Development\\training",
   "runTests": false,
   "installs": {
