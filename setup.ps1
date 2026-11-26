@@ -81,6 +81,7 @@ $DefaultWinget = @{
     "dotnet"      = "Microsoft.DotNet.SDK.10"
     "jdk"         = "EclipseAdoptium.Temurin.25.JDK"
     "vscode"      = "Microsoft.VisualStudioCode"
+    "notepadPlusPlus" = "Notepad++.Notepad++"
 }
 
 $script:Config = $null
@@ -561,6 +562,14 @@ function Get-ProgramVersion([string]$Name, $Spec) {
                 if (Test-Path -LiteralPath $path) { $text = Get-CommandOutput $path @("--version") }
             }
             return $text
+        }
+        "notepadPlusPlus" {
+            $paths = @(
+                (Join-Path $env:ProgramFiles "Notepad++\notepad++.exe"),
+                (Join-Path ${env:ProgramFiles(x86)} "Notepad++\notepad++.exe"))
+            $exe = $paths | Where-Object { $_ -and (Test-Path -LiteralPath $_) } | Select-Object -First 1
+            if (-not $exe) { return $null }
+            return (Get-Item -LiteralPath $exe).VersionInfo.ProductVersion
         }
         "vscode" {
             $text = Get-CommandOutput "code" @("--version")
@@ -1185,7 +1194,7 @@ function Invoke-Bootstrap {
 # setup.json checks
 # ---------------------------------------------------------------------------------------------------------------------
 
-$KnownInstalls = @("git", "powershell7", "node", "python", "dotnet", "jdk", "maven", "msys2", "rust", "visualStudio", "buildTools", "vcRuntime", "vscode")
+$KnownInstalls = @("git", "powershell7", "node", "python", "dotnet", "jdk", "maven", "msys2", "rust", "visualStudio", "buildTools", "vcRuntime", "vscode", "notepadPlusPlus")
 $KnownStepTypes = @("npm", "npm-run", "python-venv", "command", "copy", "msbuild-restore", "write-file", "dotnet-build", "download")
 $KnownRootSettings = @("schemaVersion", "name", "folder", "repoUrl", "branch", "baseDirectory", "runTests", "installs", "steps", "launch")
 $KnownInstallSettings = @("install", "pinned", "sideBySide", "orNewer", "winget", "override", "root", "url", "workloads", "packages", "extensions")
@@ -1603,7 +1612,7 @@ if ($PSVersionTable.PSVersion.Major -lt 7 -and -not $RelaunchedInPowerShell7 -an
     exit $LASTEXITCODE
 }
 
-foreach ($name in @("node", "python", "dotnet", "jdk", "maven", "msys2", "rust", "visualStudio", "buildTools", "vcRuntime", "vscode")) {
+foreach ($name in @("node", "python", "dotnet", "jdk", "maven", "msys2", "rust", "visualStudio", "buildTools", "vcRuntime", "vscode", "notepadPlusPlus")) {
     Invoke-InstallItem $name
 }
 
