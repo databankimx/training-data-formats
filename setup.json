@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "name": "Working With Data Formats",
+  "folder": "training-data-formats",
+  "repoUrl": "https://github.com/databankimx/training-data-formats.git",
+  "branch": "main",
+  "baseDirectory": "C:\\Development\\training",
+  "runTests": false,
+  "installs": {
+    "git": {
+      "install": true,
+      "winget": "Git.Git"
+    },
+    "powershell7": {
+      "install": true,
+      "pinned": "7",
+      "winget": "Microsoft.PowerShell"
+    },
+    "node": {
+      "install": true,
+      "pinned": "24",
+      "orNewer": true,
+      "winget": "OpenJS.NodeJS.LTS"
+    },
+    "python": {
+      "install": true,
+      "pinned": "3.12",
+      "sideBySide": true,
+      "winget": "Python.Python.3.12"
+    },
+    "dotnet": {
+      "install": true,
+      "pinned": "10",
+      "winget": "Microsoft.DotNet.SDK.10"
+    },
+    "vscode": {
+      "install": true,
+      "winget": "Microsoft.VisualStudioCode",
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-python.python"
+      ]
+    },
+    "notepadPlusPlus": {
+      "install": true,
+      "winget": "Notepad++.Notepad++"
+    }
+  },
+  "steps": [
+    {
+      "name": "Python virtual environment",
+      "type": "python-venv",
+      "path": ".venv",
+      "requirements": "requirements.txt",
+      "requires": [
+        "python"
+      ]
+    },
+    {
+      "name": "npm packages",
+      "type": "npm",
+      "folder": ".",
+      "command": "ci",
+      "requires": [
+        "node"
+      ]
+    },
+    {
+      "name": "Runner tests",
+      "type": "npm-run",
+      "folder": "lesson-runner",
+      "script": "test",
+      "runTests": true,
+      "requires": [
+        "node"
+      ]
+    }
+  ],
+  "launch": {
+    "ide": "vscode",
+    "kind": "electron",
+    "folder": "lesson-runner"
+  }
+}
